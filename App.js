@@ -29,7 +29,7 @@ import {
 const App: () => Node = () => {
   return (
     <View style = {styles.container}>
-      <Text style = {styles.hello}>Hello World</Text>
+      <Text style = {styles.hello}>jihojiho</Text>
     </View>
   );
 };
