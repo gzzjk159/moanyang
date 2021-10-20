@@ -29,12 +29,8 @@ import {
 const App: () => Node = () => {
   return (
     <View style = {styles.container}>
-<<<<<<< HEAD
-      <Text style = {styles.hello}>저희 이제 능숙해요 </Text>
-=======
       <Text style = {styles.hello}>chuu is very cute</Text>
       <Text style = {styles.hello}>testing</Text>
->>>>>>> e1b4ae8358b8932745d2ecd820896478874b9aa6
     </View>
   );
 };
