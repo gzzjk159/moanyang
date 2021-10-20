@@ -29,7 +29,8 @@ import {
 const App: () => Node = () => {
   return (
     <View style = {styles.container}>
-      <Text style = {styles.hello}>지금 시각은 4:04분에 테스트 하고 있습니다.</Text>
+      <Text style = {styles.hello}>chuu is very cute</Text>
+      <Text style = {styles.hello}>testing</Text>
     </View>
   );
 };
