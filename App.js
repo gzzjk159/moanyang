@@ -1,91 +1,57 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
 
+import 'react-native-gesture-handler'
+import * as React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import React from 'react';
-import React, { Component } from 'react';
-
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
+import{
+  SafeAreaView, 
   View,
-  AppRegistry,
+  Text,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-const App: () => Node = () => {
+import { Button } from 'react-native-elements';
+
+const Stack = createStackNavigator();
+
+const App: () => React$Node = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.hello}>
-        <Test1/>
-        <Test2/>
-        <Test3/>
-        </View>
-    </SafeAreaView>
-  );
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen      
+          name="Home"
+          component={HomeScreen}
+          options={{title: 'Welcome'}}
+          />    
+          <Stack.Screen name ="Second" component={SecondScreen} options={{title: 'SecondPage'}}/>
+
+         
+
+      </Stack.Navigator>
+      </NavigationContainer>);
 };
-class Test1 extends Component {
-  render() {
-    return (
-      <View>
-        <Text>test1 실험 중이에요</Text>
-        </View>
-    );
-  };
-}
-class Test2 extends Component {
-  render() {
-    return (
-      <View>
-        <Text>test2 실험 중이에요</Text>
-        </View>
-    );
-  };
-}
-class Test3 extends Component {
-  render() {
-    return (
-      <View>
-        <Text style={styles.hello}>chuu is very cute</Text>
-        <Text style={styles.hello}>testing</Text>
-        </View>
-    );
-  };
-}
-const styles = StyleSheet.create({
-  container : {
-    flex : 1,
-    justifyContent : 'center',
-    alignItems : 'center',
-  },
-  hello : {
-    color : 'red',
-  },
-  navBar : {
-    height : 60,
-    backgroundColor : '#FF6E40',
-    justifyContent : 'center',
-    alignItems : 'center',
-  },
-  navBarText : {
-    fontSize : 20,
-    color : 'white'
-  },
-});
 
 export default App;
+
+function HomeScreen({navigation}){
+  return (
+    <Button title="Go to Second Page"
+      onPress={() => navigation.navigate('Second', {name: 'Parameter_1'})}
+      />
+  );
+}
+
+function SecondScreen({navigation}, param){
+
+  return(
+
+    <SafeAreaView style={{marginTop:50, flex:1}}>
+    <View style={{flex:2}}/>
+    <View style={{flex:2}}/>
+    <View style={{flex:1, justifyContent: 'flex-end'}}>
+      <Button title="Back" onPress={()=> navigation.goBack()}/>
+    </View>
+    </SafeAreaView>
+
+  );
+}
