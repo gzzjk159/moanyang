@@ -1,23 +1,4 @@
-<<<<<<< HEAD
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
 
-import React from 'react';
-import type {Node} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-=======
 
 import 'react-native-gesture-handler'
 import * as React from 'react';
@@ -34,7 +15,7 @@ import{
   Image,
   TextInput,
   Touchable,
->>>>>>> 2bb1e4dd69c963954495b0669ff7c9ca2e2cfa57
+
 } from 'react-native';
 // import _ from 'lodash';
 import styled from 'styled-components';
@@ -67,49 +48,6 @@ const Contents = styled.ScrollView`
 const Menu = styled.Button`
   align-items : end;
 `;
-
-
-  
- 
-
-
-//변수 선언
-//let numbers = [];
-
-<<<<<<< HEAD
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-const App: () => Node = () => {
-  return (
-    <View style = {styles.container}>
-      <Text style = {styles.hello}>chuu is very cute</Text>
-      <Text style = {styles.hello}>testing</Text>
-    </View>
-  );
-};
-
-const styles = StyleSheet.create({
-  container : {
-    flex : 1,
-    justifyContent : 'center',
-    alignItems : 'center',
-  },
-  hello : {
-    color : 'red',
-  }
-});
-
-export default App;
-=======
-//_.times( 45, n => numbers.push( n + 1 ) );
-//numbers = _.shuffle( numbers );
-
 export default function App () {
 
   return (
@@ -186,4 +124,4 @@ const styles = StyleSheet.create({
 
 
 });
->>>>>>> 2bb1e4dd69c963954495b0669ff7c9ca2e2cfa57
+
