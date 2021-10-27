@@ -21,6 +21,9 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import { assertTSExpressionWithTypeArguments } from '@babel/types';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { TouchableHighlight } from 'react-native-gesture-handler';
+import colors from './assets/colors/colors';
+
+
 //const Stack = createStackNavigator();
 //component를 꾸밀때 쓰는 방법
 /* 
@@ -35,8 +38,7 @@ const HomeContainer = styled.SafeAreaView`
   flex : 1;
 `;
 const Search = styled.TextInput`
-  margin-left : 20;
-  margin-right : 20;
+  backgroundColor: '#FFFFFF';
 `;
 const Contents = styled.ScrollView`
   flex : 13;
@@ -44,14 +46,12 @@ const Contents = styled.ScrollView`
 const Menu = styled.Button`
   align-items : end;
 `;
-const Topvar = styled.View`
-  flex : 1;
-  flex-direction : row;
-  align-items : center;
-`;
-const Tab = styled.View`
-  flex : 1;
-`;
+
+
+  
+ 
+
+
 //변수 선언
 //let numbers = [];
 
@@ -62,35 +62,75 @@ export default function App () {
 
   return (
       <HomeContainer>
-          <Topvar>
-            <Text style = {styles.moaynang}>모아냥</Text>
-            <Image source = { require('./image/moanyang.png') } style={ { width : 50,height:50 }}/>
-            <Search style = { { width: 100, height: 10, borderColor : 'gray', borderWidth  :0.5}} />
-            <Menu title="" onPress = { () => {} }/>
-          </Topvar>
-          <Tab style = { styles.blue }>
-            <Text>ㅁㄴㅇ린어리</Text>
-          </Tab>
-        <Contents style = { styles.black}>
+          <View style = {styles.Top}>
+            <Text style = {styles.moaynang }>모아냥</Text>
+            <Image source = { require('./image/moanyang.png') } style = {styles.moanyangimage} />
+              <Search style = { styles.Search}/>
+            <Image source = { require('./image/message.png') } style = {styles.Topmessage} />
+          </View>
+
+
+          <View style= { styles.Tap}>
+            <Text style={{fontSize: 20, fontWeight: 'bold'}}>비교과</Text>
+            <Text style={{fontSize: 20, fontWeight: 'bold'}}>공모전</Text>
+            <Text style={{fontSize: 20, fontWeight: 'bold'}}>대외활동</Text>
+            <Text style={{fontSize: 20, fontWeight: 'bold'}}>톡톡</Text>
+          </View>
+        <Contents style = { {backgroundColor: 'yellow'}}>
             <Text>sdfsfsdfdsf</Text>
         </Contents>
       </HomeContainer>
   )
 };
 const styles = StyleSheet.create({
-  moaynang : {
-    fontWeight :'Bold',
-    padding : 10,
-    fontSize : 20,
+
+  Top: {
+    height: 60,
+  backgroundColor: '#313A96',
+  flexDirection: 'row',
+  alignitems : 'center',
   },
- Home : {
-    backgroundColor : '#ffff00',
+  
+
+  moaynang : {
+    fontFamily: "BMDOHYEON",
+    fontSize: 22, 
+    fontWeight: 'bold',
+    color: colors.white,
+    padding: 2,
+    marginTop: 10,
+    marginLeft: 8,
+    marginRight: 3,
+  },
+  moanyangimage : {
+    width : 50,
+    height:50,
+    marginRight: 10,
+    marginTop: 4,
+  },
+  Topmessage: {
+    width : 43,
+    height: 33,
+    marginLeft: 20,
+    marginTop: 13,
+  },
+
+ Search : { // 검색창
+  width: 180, 
+  height: 35, 
+  borderColor : 'gray', 
+  borderWidth  :0.5, 
+  borderRadius: 5,
+   backgroundColor: "#FFFFFF",
+   marginTop: 12,
  },
- blue : {
-   backgroundColor : 'blue',
- },
- black : {
-  backgroundColor : 'black'
- },
+
+ Tap: {
+   flexDirection: 'row',
+   height: 60,
+ }
+
+ 
+
 
 });
