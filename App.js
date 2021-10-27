@@ -64,7 +64,7 @@ export default function App () {
       <HomeContainer>
           <Topvar>
             <Text style = {styles.moaynang}>모아냥</Text>
-            <Image source = { require('./image/anyang.png') } style={ { width : 50,height:50 }}/>
+            <Image source = { require('./image/moanyang.png') } style={ { width : 50,height:50 }}/>
             <Search style = { { width: 100, height: 10, borderColor : 'gray', borderWidth  :0.5}} />
             <Menu title="" onPress = { () => {} }/>
           </Topvar>
