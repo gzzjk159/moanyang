@@ -71,7 +71,7 @@ export default function App () {
 
 
           <View style= { styles.Tap}>
-            <Text style={{fontSize: 20, fontWeight: 'bold'}}>비교과</Text>
+            <Text>비교과</Text>
             <Text style={{fontSize: 20, fontWeight: 'bold'}}>공모전</Text>
             <Text style={{fontSize: 20, fontWeight: 'bold'}}>대외활동</Text>
             <Text style={{fontSize: 20, fontWeight: 'bold'}}>톡톡</Text>
