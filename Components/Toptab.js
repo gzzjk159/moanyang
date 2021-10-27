@@ -3,7 +3,7 @@ import { Text } from "react-native";
 
 // const TabTab = createMaterialTopTabNavigator();
 
-// export default function Toptap() {
+// export default function TopTap() {
 //     return (
 //     );
 // }

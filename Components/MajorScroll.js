@@ -1,20 +1,13 @@
-// import React, { Component } from 'react';
-// import { StyleSheet, Platform } from 'react-native';
+import React, { Component } from 'react';
+import { StyleSheet, Platform } from 'react-native';
 
-// export default function MajorScroll {
-//   render() {
-//     return (
-//       <View style={styles.container}>
-//         <Text>MainScreen</Text>
-//       </View>
-//     );
-//   }
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
+const Container = styled.SafeAreaView`
+    flex : 1;
+`;
+export default function MajorScroll () {
+    return (
+        <Container>
+                
+        </Container>
+    )
+};

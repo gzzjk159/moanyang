@@ -16,15 +16,13 @@ import{
   Touchable,
   StatusBar,
 } from 'react-native';
-// import _ from 'lodash';
 import styled from 'styled-components';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import { assertTSExpressionWithTypeArguments } from '@babel/types';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { TouchableHighlight } from 'react-native-gesture-handler';
-import { Provider } from 'react-redux';
-import { store } from 'react-redux';
-import { createStore } from 'redux';
+import NonDiscipline from './Screen/NonDiscipline'
+import Competition from './Screen/Competition'
+import OutdoorActivities from './Screen/OutdoorActivities'
+import Mytalktalk from './Screen/Mytalktalk'
+
 //const Stack = createStackNavigator();
 //component를 꾸밀때 쓰는 방법
 /* 
@@ -35,69 +33,51 @@ const name = stled.(component)`
 // const Row = styled.View`
 //   flex-direction : row;
 // `;
-// const HomeContainer = styled.SafeAreaView`
-//   flex : 1;
-// `;
-// const Search = styled.TextInput`
-//   margin-left : 20;
-//   margin-right : 20;
-// `;
-// const Contents = styled.ScrollView`
-//   flex : 13;
-// `;
-// const Menu = styled.Button`
-//   align-items : end;
-// `;
-// const Topvar = styled.View`
-//   height : 50;
-//   flex-direction : row;
-//   align-items : center;
-// `;
-// const TabT = styled.View`
-//   height : 50;
-// `;
 //변수 선언
 //let numbers = [];
 
 //_.times( 45, n => numbers.push( n + 1 ) );
 //numbers = _.shuffle( numbers );
+const Container = styled.SafeAreaView`
+    flex : 1;
+`;
 
 const Tab = createMaterialTopTabNavigator();
-const Store = createStore();
 
-export const TopTabNavigator = () => {
+function Tabs () {
   return (
     <Tab.Navigator>
       <Tab.Screen 
-        name = "non-discipline" 
-        component = {HomeScreen}
+        name = "비교과" 
+        component = {NonDiscipline}
       />
       <Tab.Screen 
-        name = "competition" 
-        component = {non-disciplineScreen}
+        name = "공모전" 
+        component = {Competition}
       />
       <Tab.Screen 
-        name = "outdoor-activities" 
-        component = {outdoor-activitiesScreen}/>
+        name = "대외활동" 
+        component = {OutdoorActivities}
+        />
       <Tab.Screen 
-        name = "mytalktalk" 
-        component = {mytalktalkScreen}/>
+        name = "my톡톡" 
+        component = {Mytalktalk}
+        />
     </Tab.Navigator>
   );
 };
 
 export default function App () {
-
   return (
-      <Provider store = { store }>
-        <StatusBar backgroundColor = '#FFFFFF' barStyle = "dark-content"/>
+      <Container>
+        <StatusBar/>
         <NavigationContainer>
-          <TopTabNavigator/>
+            <Tabs/>
         </NavigationContainer>
-      </Provider>
+      </Container>
   )
-};
-const styles = StyleSheet.create({
+}
+// const styles = StyleSheet.create({
 //   moaynang : {
 //     fontWeight :'Bold',
 //     padding : 10,
@@ -112,4 +92,4 @@ const styles = StyleSheet.create({
 //  black : {
 //     backgroundColor : 'black'
 //   },
-});
+// });
