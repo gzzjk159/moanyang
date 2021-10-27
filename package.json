@@ -13,7 +13,11 @@
 <<<<<<< HEAD
 =======
     "@react-native-community/masked-view": "^0.1.11",
+<<<<<<< HEAD
 >>>>>>> 1ca54805168a6411ced5198d4979c4dc6f229e3a
+=======
+    "@react-navigation/material-top-tabs": "^6.0.6",
+>>>>>>> 2bb1e4dd69c963954495b0669ff7c9ca2e2cfa57
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/stack": "^6.0.11",
     "react": "17.0.2",
@@ -25,11 +29,19 @@
 =======
     "react-native-elements": "^3.4.2",
     "react-native-gesture-handler": "^1.10.3",
+    "react-native-keyboard-aware-scroll-view": "^0.9.4",
+    "react-native-pager-view": "^5.4.7",
     "react-native-reanimated": "^2.2.3",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.8.0",
+<<<<<<< HEAD
     "react-native-vector-icons": "^8.1.0"
 >>>>>>> 1ca54805168a6411ced5198d4979c4dc6f229e3a
+=======
+    "react-native-tab-view": "^3.1.1",
+    "react-native-vector-icons": "^8.1.0",
+    "styled-components": "^5.3.3"
+>>>>>>> 2bb1e4dd69c963954495b0669ff7c9ca2e2cfa57
   },
   "devDependencies": {
     "@babel/core": "7.15.5",
@@ -43,5 +55,11 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+
+  "rnpm": {
+    "assets": [
+	"./src/assets/fonts"
+    ]
+}
 }
