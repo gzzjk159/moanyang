@@ -21,7 +21,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import { assertTSExpressionWithTypeArguments } from '@babel/types';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { TouchableHighlight } from 'react-native-gesture-handler';
-import colors from './assets/colors/colors';
+
 
 
 //const Stack = createStackNavigator();
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     fontFamily: "BMDOHYEON",
     fontSize: 22, 
     fontWeight: 'bold',
-    color: colors.white,
+    color: 'white',
     padding: 2,
     marginTop: 10,
     marginLeft: 8,
