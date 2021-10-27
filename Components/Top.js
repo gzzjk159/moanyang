@@ -21,7 +21,7 @@ const SearchInput = () => {
       <View>
         <Text style = { styles.moanyang } >모아냥</Text>
         <TouchableHighlight onPress={ () => this.moveToAddNewCustomer() }>
-            <Image style = {styles.imagestyle} source={require('moayu/image/anyang.png')}></Image>
+            <Image style = {styles.imagestyle} source={require('moayu/image/moanyang.png')}></Image>
         </TouchableHighlight>
         <TextInput style={styles.search}/>
       </View>
