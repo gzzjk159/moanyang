@@ -25,10 +25,12 @@ export default function NonDiscipline(){
     return(
         <Container>
             <Scroll>
-                <Text>
-                    asd
-                </Text>
             </Scroll>
         </Container>
-    )
+    );
 }
+const styles = StyleSheet.create({
+    // blue : {
+    //    backgroundColor : '#313A96',
+    // },
+  });

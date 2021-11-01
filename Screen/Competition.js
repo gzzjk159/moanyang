@@ -15,13 +15,14 @@ import{
   Touchable,
   StatusBar,
 } from 'react-native';
-// import _ from 'lodash';
 import styled from 'styled-components';
+
 const Container = styled.SafeAreaView`
     flex : 1;
 `;
 const Scroll = styled.ScrollView`
 `;
+
 export default function Competition(){
     return(
         <Container>
@@ -31,5 +32,13 @@ export default function Competition(){
                 </Text>
             </Scroll>
         </Container>
-    )
+    );
 }
+// const styles = StyleSheet.create({
+    // blue : {
+    //    backgroundColor : '#313A96',
+    // },
+//     backgray : {
+//         backgroundColor : '#000000',
+//     },
+//   });

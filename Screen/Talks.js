@@ -33,5 +33,10 @@ export default function Talks(){
                 </Text>
             </Scroll>
         </Container>
-    )
+    );
 }
+const styles = StyleSheet.create({
+    // blue : {
+    //    backgroundColor : '#313A96',
+    // },
+  });

@@ -20,7 +20,7 @@ import styled from 'styled-components';
 const Container = styled.SafeAreaView`
     flex : 1;
 `;
-const Mt = styled.Text`
+const Scroll = styled.ScrollView`
 `;
 export default function Setting(){
     return(
@@ -29,5 +29,5 @@ export default function Setting(){
                 Mytalktalk
             </Mt>
         </Container>
-    )
+    );
 }

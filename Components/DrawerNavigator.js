@@ -1,22 +1,18 @@
 import React, {useState} from "react";
-import { Image, TextInput, View, StyleSheet, Text } from "react-native";
+import {
+     Image,
+     TextInput, 
+     View, 
+     StyleSheet, 
+     Text ,
+} from "react-native";
 import { 
     createDrawerNavigator,
-    tabBarLabel, 
-    DrawerContentScrollView, 
-    DrawerHeaderProps,
-    DrawerItem,
-    DrawerItemList,
-    DrawerContentOptions,
-    DrawerNavigationProp,
 } from "@react-navigation/drawer";
 import MyTalk from "../Screen/MyTalk";
 import Profile from "../Screen/Profile";
 import Setting from "../Screen/Setting";
 import HomeScreen from "../Screen/HomeScreen";
-import { DrawerContent } from "./DrawerContent";
-import Icon from 'react-native-vector-icons/MaterialIcons'
-const Drawer = createDrawerNavigator();
 import styled from 'styled-components/native';
 
 const SearchBarWrapper = styled.View`
@@ -40,7 +36,10 @@ const SearchIcon = styled.Image`
   height: 18px;
 `;
 
+const Drawer = createDrawerNavigator();
+
 export default function DrawerNavigator() {
+
     const [value, setValue] = useState('');
   return (
     <Drawer.Navigator screenOptions={{

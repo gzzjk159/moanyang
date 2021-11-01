@@ -15,19 +15,24 @@ import{
   Touchable,
   StatusBar,
 } from 'react-native';
-// import _ from 'lodash';
 import styled from 'styled-components';
+
 const Container = styled.SafeAreaView`
     flex : 1;
 `;
-const OA = styled.Text`
+const Scroll = styled.ScrollView`
 `;
+
 export default function OutdoorActivities(){
     return(
         <Container>
-            <OA>
-                OutdoorActivities
-            </OA>
+            <Scroll>
+            </Scroll>
         </Container>
-    )
+    );
 }
+const styles = StyleSheet.create({
+    blue : {
+       backgroundColor : '#313A96',
+    },
+  });

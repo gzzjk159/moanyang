@@ -20,5 +20,10 @@ export default function MyTalk(){
             <Scroll>
             </Scroll>
         </Container>
-    )
+    );
 }
+const styles = StyleSheet.create({
+  // blue : {
+  //    backgroundColor : '#313A96',
+  // },
+});

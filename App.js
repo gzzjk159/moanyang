@@ -1,31 +1,12 @@
 import 'react-native-gesture-handler'
 import * as React from 'react';
 import {NavigationContainer, useNavigation } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { createAppContainer } from 'react-navigation';
+import DrawerNavigator from './Components/DrawerNavigator';
 import{
-  Button,
-  Dimensions,
   StyleSheet,
-  SafeAreaView, 
-  View,
-  Text,
-  ScrollView,
-  Image,
-  TextInput,
-  Touchable,
-  StatusBar,
 } from 'react-native';
 import styled from 'styled-components';
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import NonDiscipline from './Screen/NonDiscipline';
-import Competition from './Screen/Competition';
-import OutdoorActivities from './Screen/OutdoorActivities';
-import Talks from './Screen/Talks';
-import MyTalk from './Screen/MyTalk';
-import Setting from './Screen/Setting';
-import { TouchableHighlight } from 'react-native-gesture-handler';
-import DrawerNavigator from './Components/DrawerNavigator';
+
 //const Stack = createStackNavigator();
 //component를 꾸밀때 쓰는 방법
 /* 
@@ -45,9 +26,6 @@ const name = stled.(component)`
 const Container = styled.SafeAreaView`
   flex : 1;
 `;
-// const Topbar = styled.View`
-//   height : 50px;
-// `;
 const Row = styled.View`
   flex-direction : row;
 `;
@@ -107,19 +85,8 @@ export default function App () {
   )
 }
 
-const styles = StyleSheet.create({
-  blue : {
-     backgroundColor : '#313A96',
-  },
-  row : {
-    flexDirection : 'row',
-  },
-  searchImage : {
-    width : 50,
-    height : 50,
-  },
-  myTalkImage : {
-    width : 50,
-    height : 50,
-  },
-});
+// const styles = StyleSheet.create({
+//   blue : {
+//      backgroundColor : '#313A96',
+//   },
+// });
