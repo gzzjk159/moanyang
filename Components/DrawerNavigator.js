@@ -13,7 +13,7 @@ import MyTalk from "../Screen/MyTalk";
 import Profile from "../Screen/Profile";
 import Setting from "../Screen/Setting";
 import HomeScreen from "../Screen/HomeScreen";
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 
 const SearchBarWrapper = styled.View`
   flex-direction: row;

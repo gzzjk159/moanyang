@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 
 const SearchBarWrapper = styled.View`
   flex-direction: row;
