@@ -26,6 +26,7 @@ import MyTalk from './Screen/MyTalk';
 import Setting from './Screen/Setting';
 import { TouchableHighlight } from 'react-native-gesture-handler';
 import DrawerNavigator from './Components/DrawerNavigator';
+
 //const Stack = createStackNavigator();
 //component를 꾸밀때 쓰는 방법
 /* 
@@ -103,6 +104,7 @@ export default function App () {
         <NavigationContainer>
           <DrawerNavigator/>
         </NavigationContainer>
+
       </Container>
   )
 }

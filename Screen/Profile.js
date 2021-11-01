@@ -26,7 +26,7 @@ export default function Profile(){
     return(
         <Container>
             <Mt>
-                Mytalktalk
+                Profile
             </Mt>
         </Container>
     )

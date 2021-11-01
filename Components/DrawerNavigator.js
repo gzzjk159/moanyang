@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Image, TextInput, View, StyleSheet, Text, Dimensions } from "react-native";
+import { Image, TextInput, View, StyleSheet, Text, Dimensions,} from "react-native";
 import { 
     createDrawerNavigator,
     tabBarLabel, 
@@ -18,6 +18,8 @@ import { DrawerContent } from "./DrawerContent";
 import Icon from 'react-native-vector-icons/MaterialIcons'
 const Drawer = createDrawerNavigator();
 import styled from 'styled-components/native';
+import { Button } from "react-native-paper";
+
 
 const SearchBarWrapper = styled.View`
   flex-direction: row;
@@ -27,6 +29,7 @@ const SearchBarWrapper = styled.View`
   padding: 5px 15px;
   
   margin-Top: 10px;
+  margin-Left: 7px;
   
   
 `;
@@ -73,9 +76,11 @@ export default function DrawerNavigator() {
                     value={value}
                     />
                 </SearchBarWrapper>
+
+                    
+                    {/*<Image style={styles.message} source={require('../image/message.png')} />*/}             
                 
-                <Image style = {styles.message} source={require('../image/message.png')}/>
-            </View>
+            </View> 
         ),
     }}>
         <Drawer.Screen 
@@ -85,6 +90,7 @@ export default function DrawerNavigator() {
                 drawerLabel: 'HOME',
             }} 
         />
+    
         <Drawer.Screen 
             name="MY TALK" 
             component={MyTalk} 
@@ -123,14 +129,13 @@ const styles = StyleSheet.create({
         
     },
     search : {
-        
-        
         width:  200,
         height: 35,  
     },
     message: {
-        position: 'absolute',
-        width: 20,
+        marginTop: 12,
+        marginLeft: 16,
+        width: 40,
         height: 35,
     }
   });
