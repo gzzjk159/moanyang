@@ -20,14 +20,16 @@ import styled from 'styled-components';
 const Container = styled.SafeAreaView`
     flex : 1;
 `;
-const Cp = styled.Text`
+const Scroll = styled.ScrollView`
 `;
 export default function Competition(){
     return(
         <Container>
-            <Cp>
-                Competition
-            </Cp>
+            <Scroll>
+                <Text>
+                    Competition
+                </Text>
+            </Scroll>
         </Container>
     )
 }

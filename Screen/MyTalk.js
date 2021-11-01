@@ -4,16 +4,6 @@ import {NavigationContainer, useNavigation } from '@react-navigation/native';
 //import { createStackNavigator } from '@react-navigation/stack';
 import{
   Button,
-  Dimensions,
-  StyleSheet,
-  SafeAreaView, 
-  View,
-  Text,
-  ScrollView,
-  Image,
-  TextInput,
-  Touchable,
-  StatusBar,
 } from 'react-native';
 // import _ from 'lodash';
 import styled from 'styled-components';
@@ -21,14 +11,14 @@ import styled from 'styled-components';
 const Container = styled.SafeAreaView`
     flex : 1;
 `;
-const Mt = styled.ScrollView`
+const Scroll = styled.ScrollView`
 `;
 
-export default function Mytalktalk(){
+export default function MyTalk(){
     return(
         <Container>
-            <Mt>
-            </Mt>
+            <Scroll>
+            </Scroll>
         </Container>
     )
 }

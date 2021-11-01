@@ -17,16 +17,19 @@ import{
 } from 'react-native';
 // import _ from 'lodash';
 import styled from 'styled-components';
+
 const Container = styled.SafeAreaView`
+    flex : 1;
 `;
 const Scroll = styled.ScrollView`
 `;
-export default function NonDiscipline(){
+
+export default function Talks(){
     return(
         <Container>
             <Scroll>
                 <Text>
-                    asd
+                    sdfsdfsdfsdf
                 </Text>
             </Scroll>
         </Container>
