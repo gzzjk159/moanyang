@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
         height: 35,  
     },
     message: {
-        
+        position: 'absolute',
         width: 20,
         height: 35,
     }
