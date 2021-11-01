@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Image, TextInput, View, StyleSheet, Text } from "react-native";
+import { Image, TextInput, View, StyleSheet, Text, Dimensions } from "react-native";
 import { 
     createDrawerNavigator,
     tabBarLabel, 
@@ -24,9 +24,11 @@ const SearchBarWrapper = styled.View`
   align-items: center;
   background-color: #efefef;
   border-radius: 4px;
-  padding: 10px 14px 10px 12px;
-  margin: 0px 20px;
-  display: flex;
+  padding: 5px 15px;
+  
+  margin-Top: 10px;
+  
+  
 `;
 
 const SearchInput = styled.TextInput`
@@ -45,18 +47,21 @@ export default function DrawerNavigator() {
   return (
     <Drawer.Navigator screenOptions={{
         headerStyle : {
-            backgroundColor: '#313A96'
+            backgroundColor: '#313A96',
         },
+        
         headerTintColor: '#fff',
         headerTitelStyle: {
-            fontWeight: 'bold'
+            fontWeight: 'bold',
             
         },
+        
         headerTitle: () => (
             <View style={styles.row}>
-                <Text style = {styles.center}>모아냥</Text>
-                <Image style={{ width : 50 ,height: 50 }} source={require('../image/moanyang.png')}/>
-                <SearchBarWrapper>
+                
+                <Image style={styles.moanyang} source={require('../image/moanyang.png')}/>
+                    
+                <SearchBarWrapper style= {styles.search}>
                     <SearchIcon source={require('../image/searchImage.png')} />
                     <SearchInput
                     autoCapitalize="none"
@@ -68,6 +73,8 @@ export default function DrawerNavigator() {
                     value={value}
                     />
                 </SearchBarWrapper>
+                
+                <Image style = {styles.message} source={require('../image/message.png')}/>
             </View>
         ),
     }}>
@@ -99,11 +106,31 @@ export default function DrawerNavigator() {
 const styles = StyleSheet.create({
     row : {
         flexDirection : 'row',
+        flex: 1,
+        
+    },
+   
+    moanyang: {
+        marginTop: 5,
+        width : 50 ,
+        height: 45,
     },
     center : {
-        fontSize : 15,
+        fontSize : 1,
         fontWeight : 'bold',
-        marginTop : 10,
-        alignItems : 'flex-start',
+        marginTop : 13,
+    
+        
     },
+    search : {
+        
+        
+        width:  200,
+        height: 35,  
+    },
+    message: {
+        
+        width: 20,
+        height: 35,
+    }
   });
