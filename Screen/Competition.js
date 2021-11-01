@@ -27,7 +27,7 @@ export default function Competition(){
         <Container>
             <Scroll>
                 <Text>
-                    Competition
+                    asdasdasdas
                 </Text>
             </Scroll>
         </Container>
