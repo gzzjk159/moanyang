@@ -148,18 +148,35 @@ export default function NonDiscipline() {
 
                     <View style={{ height: 250, borderTopColor: 'purple', borderBottomColor: 'purple', borderWidth: 1, }}>
                         <View style ={{flex:3.5, flexDirection:'row', borderBottomColor: '#D9D9D9', borderBottomWidth: 1,}}>
-                            <View style={{flex: 1, backgroundColor: 'blue',}}>
+                            <View style={{flex: 1, backgroundColor: 'green',}}>
                                     <Image style={styles.ImageContentContain}
                                     source={require('../image/non/non01.jpg')} />
                             </View>
-                            <View style={{flex: 1.5, backgroundColor: 'green',}}>
-                                 
-                                    <Text style={{padding: 10, fontSize: 25, fontWeight: 'bold',}}>직무 교육 프로그램 가나다마바</Text>
-                                    <Text style={{padding: 10, fontSize: 15, fontWeight: 'bold',}}> D - 2 </Text>
-                                    <Text style={{padding: 10, fontSize: 15, fontWeight: 'bold',}}> D - 2 </Text>
 
+                            <View style={{flex: 1.5, }}>
+                                 
+                                    <Text style={{padding: 10, fontSize: 25, fontWeight: 'bold', color: '#313A96'}}>직무 교육 프로그램 가나다마바</Text>
+                                    <View style={{flexDirection: 'row'}}>
+                                        <View style={{flex: 1,}}>
+                                            <Text style={{padding: 10, fontSize: 20, fontWeight: 'bold', color: '#313A96'}}> D - 2 </Text>
+
+
+                                            <View style={{flexDirection: 'row'}}>
+                                                <Image style={{marginLeft: 10,marginTop: 10, width: 20, height: 20}}
+                                                 source={require('../image/view.png')} />
+                                                <Text style={{padding: 10, fontSize: 15, fontWeight: 'bold', color: '#C3C3C3'}}> 조회수 </Text>
+                                            
+                                            </View>
+                                        </View>
+                                        <View style ={{flex: 1, backgroundColor: 'blue'}}>
+                                            <View>
+                                                    <Text style={{}}>#해시태그</Text>
+                                            </View>
+                                        </View>
+                                    </View>
                             </View>    
                         </View>
+
                         <View style ={{flex: 1, backgroundColor: 'red', flexDirection: 'row'}}>
                             <View style ={{flex: 1, borderRightColor: '#D9D9D9', borderRightWidth: 1,}}>
                                 <Text style={{ paddingTop: 13, fontWeight: 'bold', fontSize: 20, textAlign: "center", textAlignVertical: "center", }}>정보 보기</Text>
@@ -175,7 +192,8 @@ export default function NonDiscipline() {
                    
 
                     <View style={{ height: 250, backgroundColor: 'yellow' }}>
-
+                    <Image style={styles.ImageContent}
+                                    source={require('../image/view.png')} />
 
 
                     </View>
@@ -210,6 +228,7 @@ const styles = StyleSheet.create({
         marginLeft: 13,
         marginTop: 10,
         resizeMode: "stretch",
+    
     },
     ImageContentContain: {
         height: 160,
