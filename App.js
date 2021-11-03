@@ -1,48 +1,92 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
-import React from 'react';
-import type {Node} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
+import 'react-native-gesture-handler'
+import * as React from 'react';
+import {NavigationContainer, useNavigation } from '@react-navigation/native';
+import DrawerNavigator from './Components/DrawerNavigator';
+import{
   StyleSheet,
-  Text,
-  useColorScheme,
-  View,
 } from 'react-native';
+import styled from 'styled-components';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+//const Stack = createStackNavigator();
+//component를 꾸밀때 쓰는 방법
+/* 
+const name = stled.(component)`
+  자바스크립트 문법
+`;
+*/
+// const Row = styled.View`
+//   flex-direction : row;
+// `;
+//변수 선언
+//let numbers = [];
 
-const App: () => Node = () => {
+//_.times( 45, n => numbers.push( n + 1 ) );
+//numbers = _.shuffle( numbers );
+
+const Container = styled.SafeAreaView`
+  flex : 1;
+`;
+const Row = styled.View`
+  flex-direction : row;
+`;
+
+
+// const Tab = createMaterialTopTabNavigator();
+
+// function Tabs () {
+//   return (
+//     <Tab.Navigator>
+//       <Tab.Screen 
+//         name = "비교과" 
+//         component = {NonDiscipline}
+//       />
+//       <Tab.Screen 
+//         name = "공모전" 
+//         component = {Competition}
+//       />
+//       <Tab.Screen 
+//         name = "대외활동" 
+//         component = {OutdoorActivities}
+//         />
+//       <Tab.Screen 
+//         name = "Talks" 
+//         component = {Talks}
+//         />
+//     </Tab.Navigator>
+//   );
+// };
+
+// function Top (){
+//   return(
+//     <>
+//     <Row>
+//       <TouchableHighlight onPress = { () => {} }>
+//         <Image
+//           source = { require('./image/ayu3.png') }
+//         />
+//       </TouchableHighlight>
+//       <TouchableHighlight onPress = { () => {} }>
+//         <Image
+//           source = { require('./image/ayu3')}
+//         />
+//       </TouchableHighlight>
+//     </Row>
+//     </>
+//   )
+// }
+
+export default function App () {
   return (
-    <View style = {styles.container}>
-      <Text style = {styles.hello}>지금 시각은 4:04분에 테스트 하고 있습니다.</Text>
-    </View>
-  );
-};
+      <Container>
+        <NavigationContainer>
+          <DrawerNavigator/>
+        </NavigationContainer>
+      </Container>
+  )
+}
 
-const styles = StyleSheet.create({
-  container : {
-    flex : 1,
-    justifyContent : 'center',
-    alignItems : 'center',
-  },
-  hello : {
-    color : 'red',
-  }
-});
-
-export default App;
+// const styles = StyleSheet.create({
+//   blue : {
+//      backgroundColor : '#313A96',
+//   },
+// });
