@@ -1,0 +1,23 @@
+
+[
+ {
+    "id":1,
+    "name": "직무소개 프로그램",
+    "DAY":20,
+    "url":"../image/non/non01.jpg"
+ },
+ {
+    "id":2,
+    "name": "너와 함께라면 프로그램",
+    "DAY":30,
+    "url":"../image/non/non01.jpg"
+    
+ },
+ {
+    "id":3,
+    "name": "신과 함께라면 프로그램",
+    "DAY":10,
+    "url":"../image/non/non01.jpg"
+ }
+]
+    
