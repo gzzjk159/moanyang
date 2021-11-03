@@ -68,6 +68,13 @@ export default function DrawerNavigator() {
                     value={value}
                     />
                 </SearchBarWrapper>
+<<<<<<< HEAD
+=======
+
+                    
+                    <Image style={styles.message} source={require('../image/message.png')} />          
+                
+>>>>>>> jiho2
             </View> 
         ),
     }}>
@@ -116,7 +123,7 @@ const styles = StyleSheet.create({
         height: 35,  
     },
     message: {
-        marginTop: 12,
+        marginTop: 10,
         marginLeft: 16,
         width: 40,
         height: 35,
