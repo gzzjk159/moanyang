@@ -1,25 +1,19 @@
 import React, {useState} from "react";
-import { Image, TextInput, View, StyleSheet, Text, Dimensions,} from "react-native";
+import { 
+    Image,
+    View, 
+    StyleSheet, 
+} from "react-native";
 import { 
     createDrawerNavigator,
-    tabBarLabel, 
-    DrawerContentScrollView, 
-    DrawerHeaderProps,
-    DrawerItem,
-    DrawerItemList,
-    DrawerContentOptions,
-    DrawerNavigationProp,
 } from "@react-navigation/drawer";
 import MyTalk from "../Screen/MyTalk";
 import Profile from "../Screen/Profile";
 import Setting from "../Screen/Setting";
 import HomeScreen from "../Screen/HomeScreen";
-import { DrawerContent } from "./DrawerContent";
-import Icon from 'react-native-vector-icons/MaterialIcons'
-const Drawer = createDrawerNavigator();
 import styled from 'styled-components/native';
-import { Button } from "react-native-paper";
 
+const Drawer = createDrawerNavigator();
 
 const SearchBarWrapper = styled.View`
   flex-direction: row;
@@ -27,11 +21,8 @@ const SearchBarWrapper = styled.View`
   background-color: #efefef;
   border-radius: 4px;
   padding: 5px 15px;
-  
   margin-Top: 10px;
   margin-Left: 7px;
-  
-  
 `;
 
 const SearchInput = styled.TextInput`
@@ -48,7 +39,8 @@ const SearchIcon = styled.Image`
 export default function DrawerNavigator() {
     const [value, setValue] = useState('');
   return (
-    <Drawer.Navigator screenOptions={{
+    <Drawer.Navigator 
+    screenOptions={{
         headerStyle : {
             backgroundColor: '#313A96',
         },
@@ -76,21 +68,16 @@ export default function DrawerNavigator() {
                     value={value}
                     />
                 </SearchBarWrapper>
-
-                    
-                    {/*<Image style={styles.message} source={require('../image/message.png')} />*/}             
-                
             </View> 
         ),
     }}>
-        <Drawer.Screen 
+        <Drawer.Screen
             name="모아냥" 
             component={HomeScreen} 
             options={{
                 drawerLabel: 'HOME',
             }} 
         />
-    
         <Drawer.Screen 
             name="MY TALK" 
             component={MyTalk} 
@@ -101,7 +88,7 @@ export default function DrawerNavigator() {
             component={Profile}
             // options={{drawerLabel: 'ABOUT'}} 
         />
-        <Drawer.Screen 
+        <Drawer.Screen
             name="설정" 
             component={Setting} 
             // options={{drawerLabel: 'ABOUT'}} 
@@ -113,9 +100,7 @@ const styles = StyleSheet.create({
     row : {
         flexDirection : 'row',
         flex: 1,
-        
     },
-   
     moanyang: {
         marginTop: 5,
         width : 50 ,
@@ -125,8 +110,6 @@ const styles = StyleSheet.create({
         fontSize : 1,
         fontWeight : 'bold',
         marginTop : 13,
-    
-        
     },
     search : {
         width:  200,

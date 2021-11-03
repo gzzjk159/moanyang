@@ -16,7 +16,7 @@ import{
   Touchable,
   StatusBar,
 } from 'react-native';
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import NonDiscipline from './Screen/NonDiscipline';
 import Competition from './Screen/Competition';
@@ -101,10 +101,13 @@ const Row = styled.View`
 export default function App () {
   return (
       <Container>
+        <StatusBar
+          animated={true}
+          backgroundColor="#000000"
+        />
         <NavigationContainer>
           <DrawerNavigator/>
         </NavigationContainer>
-
       </Container>
   )
 }
