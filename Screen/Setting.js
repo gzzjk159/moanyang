@@ -9,6 +9,7 @@ import{
   ScrollView,
 } from 'react-native';
 import styled from 'styled-components';
+
 const Container = styled.SafeAreaView`
     flex : 1;
 `;
@@ -39,6 +40,7 @@ const Etc = styled.View``;
 export default function Setting(){
 
     return (
+        //UI 완성
         <Container>
             <Settings>
                 <Profile style = {styles.gray}>
