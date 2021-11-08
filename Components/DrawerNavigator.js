@@ -68,13 +68,7 @@ export default function DrawerNavigator() {
                     value={value}
                     />
                 </SearchBarWrapper>
-<<<<<<< HEAD
-=======
 
-                    
-                    <Image style={styles.message} source={require('../image/message.png')} />          
-                
->>>>>>> jiho2
             </View> 
         ),
     }}>

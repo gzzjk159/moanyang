@@ -3,7 +3,6 @@ import * as React from 'react';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 //import { createStackNavigator } from '@react-navigation/stack';
 import NonData from '../Nondummy.json'
-
 import {
     Button,
     Dimensions,
@@ -19,24 +18,24 @@ import {
 } from 'react-native';
 // import _ from 'lodash';
 import styled from 'styled-components';
+import {readFile} from "react-native-fs";
+
 
 export default function NonDiscipline() {
     const Container = styled.SafeAreaView``;
     const Scroll = styled.ScrollView``;
 
-    const [tempData, setTempData] = React.useState(NonData.slice(0, 2));
 
-    React.useEffect(() => {
+    const tempData = React.useState(NonData.slice(0,2));
+    
+    alert(NonData);
 
-    });
 
-    const sliderHandler = () => {
-
-    }
 
     return (
         <Container>
             <Scroll>
+        
                  <Text style={styles.HotNonDiscipline}> {/* 문자 특성*/}
                     인기 비교과
                 </Text>
@@ -44,7 +43,7 @@ export default function NonDiscipline() {
                 <View>
                     <View style={{ height: 300, flexDirection: 'row',  }}>
                         {/* 인기 비교과 전체 사이즈, 특성 */}
-
+                        
                         {
                             tempData.map(data => {
                                 return (
@@ -56,13 +55,13 @@ export default function NonDiscipline() {
                                         </View>
                                         <View style={{ flex: 1, }}>
                                             <View style={{ flex: 1, backgroundColor: 'gray',  }}>
-                                                <Text style={{ fontSize: 15, fontWeight: 'bold', textAlign: "center", textAlignVertical: "center" }}>
+                                                <Text numberOfLines={2} style={{ fontSize: 15, fontWeight: 'bold', textAlign: "center", textAlignVertical: "center" , }}>
                                                     {data.name}</Text>
                                             </View>
 
                                             <View style={{ flex: 1, flexDirection: 'row' }}>
                                                 <View style={{ flex: 1, backgroundColor: 'red', flexDirection: 'row' }}>
-                                                    <Text style={{ fontWeight: 'bold', fontSize: 17, marginTop: 13 }}> D - {data.DAY} </Text>
+                                                    <Text style={{ fontWeight: 'bold', fontSize: 17, marginTop: 15 }}> D - {data.DAY} </Text>
                                                 </View>
                                                 <View style={{ flex: 2.5, backgroundColor: 'yellow', flexDirection: 'row',  }}>
                                                     <Text style={{ padding: 10, fontWeight: 'bold', fontSize: 20, textAlign: "center", textAlignVertical: "center", marginLeft: 15, }}>
@@ -168,9 +167,15 @@ export default function NonDiscipline() {
                                             
                                             </View>
                                         </View>
-                                        <View style ={{flex: 1, backgroundColor: 'blue'}}>
+                                        <View style ={{flex: 1, }}>
                                             <View>
-                                                    <Text style={{}}>#해시태그</Text>
+                                                    
+                                                    <Text>
+                                                    #해시태그
+                                                    </Text>
+                                                    <Text>
+                                                    #해시태그
+                                                    </Text>
                                             </View>
                                         </View>
                                     </View>
@@ -207,13 +212,14 @@ export default function NonDiscipline() {
 }
 
 const styles = StyleSheet.create({
-    HotNonDiscipline: { // 인기 비교과, 마감임박 - 글자
+    HotNonDiscipline: { // 인기 비교과 - 글자
         fontWeight: 'bold',
         fontSize: 23,
         padding: 10,
         marginTop: 5,
+        
         borderBottomColor: 'black', borderBottomWidth: 2,
-        backgroundColor: '#D9D9D9',
+        backgroundColor: '#d9d9d9',
     },
     magam: {
         fontWeight: 'bold',
@@ -231,11 +237,10 @@ const styles = StyleSheet.create({
     
     },
     ImageContentContain: {
-        height: 160,
-        width: 130,
-        marginLeft: 13,
-        marginTop: 17,
-        resizeMode: "contain",
+        height: 200,
+        width: 160,
+        
+        resizeMode: "stretch",
     },
    
     showinformaiton:{
