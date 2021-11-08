@@ -6,10 +6,9 @@ import{
   Text,
   Image,
   TouchableOpacity,
-  ScrollView,
 } from 'react-native';
 import styled from 'styled-components';
-
+import Profile from '../DrawScreen/Profile';
 const Container = styled.SafeAreaView`
     flex : 1;
 `;
@@ -21,46 +20,42 @@ const MarginBody = styled.View`
     margin-right : 5px;
     margin-left : 5px;
 `;
-const MarginTopBottom = styled.View`
-    margin-top : 10px;
-    margin-bottom : 10px;
-`;
 const Row = styled.View`
-    flex-direction : row;`;
-
+    flex-direction : row;
+`;
 const Column = styled.View`
     flex-direction : column;`;
-
-const Profile = styled.View``;
+const ProfileSet = styled.View``;
 const AppSetting = styled.View``;
 const Account = styled.View``;
 const AppInformation = styled.View``;
 const Etc = styled.View``;
 
-export default function Setting(){
-
+export default function Setting({navigation}){
     return (
         //UI 완성
         <Container>
             <Settings>
-                <Profile style = {styles.gray}>
+
+                {/* 프로필  */}
+                <ProfileSet style = {styles.gray}>
                     <MarginTitle>
                         <Row style = {{justifyContent : 'space-between'}}>
                             <Text style = {styles.title}>프로필</Text>
-                            <TouchableOpacity activeOpacity={0.5} onPress={()=>{}}>
+                            <TouchableOpacity activeOpacity={0.5} onPress={()=>navigation.navigate('Profile', {Profile})}>
                                 <Image style = {styles.settingimage}
-                                    source = {require('../image/setting.png')}
+                                    source = {require('../../assets/image/setting.png')}
                                 />
                             </TouchableOpacity>
                         </Row>
                     </MarginTitle>
-                </Profile>
-                <Profile>
+                </ProfileSet>
+                <ProfileSet>
                     <MarginBody>
                         <Row style = {styles.white}>
                             <View>
                                 <Image style  = {styles.avatar}
-                                source = {require('../image/moanyang.png')}
+                                source = {require('../../assets/image/moanyang.png')}
                                 />
                             </View>
                             <Column>
@@ -70,8 +65,9 @@ export default function Setting(){
                             </Column>
                         </Row>
                     </MarginBody>
-                </Profile>
+                </ProfileSet>
 
+                {/* 계정 */}
                 <Account style = {styles.gray}>
                     <MarginTitle>
                         <Text style = {styles.title}>계정</Text>
@@ -79,27 +75,22 @@ export default function Setting(){
                 </Account>
                 <Account>
                     <MarginBody>
-                        <TouchableOpacity activeOpacity={0.5} onPress={()=>{}}>
-                            <Text style = {styles.border}>
-                                학교 인증하기
-                            </Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity activeOpacity={0.5} onPress={()=>{}}>
+                        <TouchableOpacity activeOpacity={0.5} onPress={()=> navigation.navigate('ProfileChange')}>
                             <Text style = {styles.border}>
                                 프로필 이미지 변경
                             </Text>
                         </TouchableOpacity>
-                        <TouchableOpacity activeOpacity={0.5} onPress={()=>{}}>
+                        <TouchableOpacity activeOpacity={0.5} onPress={()=>navigation.navigate('NameChange')}>
                             <Text style = {styles.border}>
                                 닉네임 변경
                             </Text>
                         </TouchableOpacity>
-                        <TouchableOpacity activeOpacity={0.5} onPress={()=>{}}>
+                        <TouchableOpacity activeOpacity={0.5} onPress={()=>navigation.navigate('Withdrawal')}>
                             <Text style = {styles.border}>
                                 회원 탈퇴
                             </Text>
                         </TouchableOpacity>
-                        <TouchableOpacity activeOpacity={0.5} onPress={()=>{}}>
+                        <TouchableOpacity activeOpacity={0.5} onPress={()=>navigation.navigate('Logout')}>
                             <Text style = {styles.borderend}>
                                 로그아웃
                             </Text>
@@ -107,6 +98,7 @@ export default function Setting(){
                     </MarginBody>
                 </Account>
 
+                {/* 앱 세팅 */}
                 <AppSetting style={styles.gray}>
                     <MarginTitle>
                         <Text style = {styles.title}>앱 설정</Text>
@@ -114,17 +106,17 @@ export default function Setting(){
                 </AppSetting>
                 <AppSetting>
                     <MarginBody>
-                        <TouchableOpacity activeOpacity={0.5} onPress={()=>{}}>
+                        <TouchableOpacity activeOpacity={0.5} onPress={()=>navigation.navigate('ChatSetting')}>
                             <Text style = {styles.border}>
                                 채팅 설정
                             </Text>
                         </TouchableOpacity>
-                        <TouchableOpacity activeOpacity={0.5} onPress={()=>{}}>
+                        <TouchableOpacity activeOpacity={0.5} onPress={()=>navigation.navigate('NotificationSetting')}>
                             <Text style = {styles.border}>
                                 알림 설정
                             </Text>
                         </TouchableOpacity>
-                        <TouchableOpacity activeOpacity={0.5} onPress={()=>{}}>
+                        <TouchableOpacity activeOpacity={0.5} onPress={()=>navigation.navigate('ClearCache')}>
                             <Text style = {styles.borderend}>
                                 캐시 삭제
                             </Text>
@@ -132,6 +124,7 @@ export default function Setting(){
                     </MarginBody>
                 </AppSetting>
 
+                {/* 앱 정보 */}
                 <AppInformation style={styles.gray}>
                     <MarginTitle>
                         <Text style = {styles.title}>앱 정보</Text>
@@ -139,37 +132,37 @@ export default function Setting(){
                 </AppInformation>
                 <AppInformation>
                     <MarginBody>
-                    <TouchableOpacity activeOpacity={0.5} onPress={()=>{}}>
+                        <TouchableOpacity activeOpacity={0.5} onPress={()=>navigation.navigate('AppVersion')}>
                             <Text style = {styles.border}>
                                 앱 버젼
                             </Text>
                         </TouchableOpacity>
-                        <TouchableOpacity activeOpacity={0.5} onPress={()=>{}}>
+                        <TouchableOpacity activeOpacity={0.5} onPress={()=>navigation.navigate('Question')}>
                             <Text style = {styles.border}>
                                 문의하기
                             </Text>
                         </TouchableOpacity>
-                        <TouchableOpacity activeOpacity={0.5} onPress={()=>{}}>
+                        <TouchableOpacity activeOpacity={0.5} onPress={()=>navigation.navigate('Notice')}>
                             <Text style = {styles.border}>
                                 공지사항
                             </Text>
                         </TouchableOpacity>
-                        <TouchableOpacity activeOpacity={0.5} onPress={()=>{}}>
+                        <TouchableOpacity activeOpacity={0.5} onPress={()=>navigation.navigate('TermService')}>
                             <Text style = {styles.border}>
                                 서비스 이용약관
                             </Text>
                         </TouchableOpacity>
-                        <TouchableOpacity activeOpacity={0.5} onPress={()=>{}}>
+                        <TouchableOpacity activeOpacity={0.5} onPress={()=>navigation.navigate('UseRule')}>
                             <Text style = {styles.border}>
                                 커뮤니티 이용규칙
                             </Text>
                         </TouchableOpacity>
-                        <TouchableOpacity activeOpacity={0.5} onPress={()=>{}}>
+                        <TouchableOpacity activeOpacity={0.5} onPress={()=>navigation.navigate('PrivacyPolicy')}>
                             <Text style = {styles.border}>
                                 개인정보 처리방침
                             </Text>
                         </TouchableOpacity>
-                        <TouchableOpacity activeOpacity={0.5} onPress={()=>{}}>
+                        <TouchableOpacity activeOpacity={0.5} onPress={()=>navigation.navigate('OpenSourceLicense')}>
                             <Text style = {styles.borderend}>
                                 오픈소스 라이센스
                             </Text>
@@ -177,6 +170,7 @@ export default function Setting(){
                     </MarginBody>
                 </AppInformation>
 
+                {/* 기타 */}
                 <Etc style={styles.gray}>
                     <MarginTitle>
                         <Text style = {styles.title}>기타</Text>
@@ -184,12 +178,12 @@ export default function Setting(){
                 </Etc>
                 <Etc>
                     <MarginBody>
-                        <TouchableOpacity activeOpacity={0.5} onPress={()=>{}}>
+                        <TouchableOpacity activeOpacity={0.5} onPress={()=>navigation.navigate('InfoConsentSetting')}>
                             <Text style = {styles.border}>
                                 정보 동의 설정
                             </Text>
                         </TouchableOpacity>
-                        <TouchableOpacity activeOpacity={0.5} onPress={()=>{}}>
+                        <TouchableOpacity activeOpacity={0.5} onPress={()=>navigation.navigate('DarkLightMode')}>
                             <Text style = {styles.borderend}>
                                 라이트/다크 모드
                             </Text>

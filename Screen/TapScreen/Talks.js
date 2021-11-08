@@ -1,22 +1,13 @@
 import 'react-native-gesture-handler'
 import * as React from 'react';
-import {NavigationContainer, useNavigation } from '@react-navigation/native';
-//import { createStackNavigator } from '@react-navigation/stack';
 import{
-  Button,
-  Dimensions,
   StyleSheet,
   SafeAreaView, 
   View,
   Text,
-  ScrollView,
-  Image,
-  TextInput,
-  Touchable,
-  StatusBar,
   TouchableOpacity,
+  onchange,
 } from 'react-native';
-// import _ from 'lodash';
 import styled from 'styled-components';
 
 const Container = styled.SafeAreaView`
@@ -33,10 +24,15 @@ const Talk = styled.View`
 `;
 
 export default function Talks(){
+    const [search , setsearch] = React.useState('');
+    const clickSearch = ({value}) => {
+        onchange = {}
+    }
+
     return(
         <Container style={styles.gray}>
             <Row>
-                <TouchableOpacity activeOpacity={0.5} style={styles.button} onPress={()=>{}}>
+                <TouchableOpacity activeOpacity={0.5} style={styles.button} onPress={()=>clickSearch('비교과')}>
                     <Text>
                         비교과
                     </Text>
@@ -81,7 +77,7 @@ export default function Talks(){
             </Row>
             <Scroll>
                 <Talk>
-                    <Text>sdasdasdas</Text>
+                    <Text>기능 구현중</Text>
                 </Talk>
             </Scroll>
         </Container>
@@ -94,16 +90,17 @@ const styles = StyleSheet.create({
     button : {
       flex : 1,
       height : 30,
-      borderWidth : 0.5,
-      borderRadius : 10,
+      borderWidth : 2,
+      borderRadius : 15,
+      borderColor : '#313A96',
       marginTop : 5,
       marginLeft : 3,
       marginRight : 3,
-      backgroundColor : '#aaaaaa',
+      backgroundColor : '#ffffff',
       justifyContent : 'center',
       alignItems : 'center',
     },
     gray : {
-        backgroundColor : '#dfdfdf'
+        backgroundColor : '#fff'
     }
   });

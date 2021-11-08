@@ -4,30 +4,39 @@ import {NavigationContainer, useNavigation } from '@react-navigation/native';
 //import { createStackNavigator } from '@react-navigation/stack';
 import{
   Button,
-  Dimensions,
   StyleSheet,
-  SafeAreaView, 
-  View,
   Text,
-  ScrollView,
-  Image,
-  TextInput,
-  Touchable,
-  StatusBar,
+  TouchableOpacity,
+  TouchableOpacityBase,
 } from 'react-native';
 // import _ from 'lodash';
 import styled from 'styled-components';
+import HomeScreen from './HomeScreen';
+import Setting from './Setting';
+
 const Container = styled.SafeAreaView`
     flex : 1;
 `;
-const Mt = styled.Text`
+const Scroll = styled.ScrollView`
 `;
-export default function Profile(){
+
+export default function MyTalk(){
     return(
         <Container>
-            <Mt>
-                Profile
-            </Mt>
+            <Scroll>
+            </Scroll>
         </Container>
     )
 }
+const styles = StyleSheet.create({
+  row : {
+    flexDirection : 'row',
+  },
+  button : {
+    width : 60,
+    height : 60,
+    backgroundColor : '#333333',
+    justifyContent : 'center',
+    alignItems : 'center',
+  },
+});

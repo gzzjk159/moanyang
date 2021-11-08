@@ -7,10 +7,10 @@ import {
 import { 
     createDrawerNavigator,
 } from "@react-navigation/drawer";
-import MyTalk from "../Screen/MyTalk";
-import Profile from "../Screen/Profile";
-import Setting from "../Screen/Setting";
-import HomeScreen from "../Screen/HomeScreen";
+import MyTalk from "../Screen/DrawScreen/MyTalk";
+import Profile from "../Screen/DrawScreen/Profile";
+import Setting from "../Screen/DrawScreen/Setting";
+import HomeScreen from "../Screen/DrawScreen/HomeScreen";
 import styled from 'styled-components/native';
 
 const Drawer = createDrawerNavigator();
@@ -54,15 +54,15 @@ export default function DrawerNavigator() {
         headerTitle: () => (
             <View style={styles.row}>
                 
-                <Image style={styles.moanyang} source={require('../image/moanyang.png')}/>
+                <Image style={styles.moanyang} source={require('../assets/image/moanyang.png')}/>
                     
                 <SearchBarWrapper style= {styles.search}>
-                    <SearchIcon source={require('../image/searchImage.png')} />
+                    <SearchIcon source={require('../assets/image/searchImage.png')} />
                     <SearchInput
                     autoCapitalize="none"
                     autoCorrect={false}
                     onChangeText={setValue}
-                    placeholder="검색어를 입력해 주세요."
+                    placeholder="검색어를 입력해 주세요."s
                     returnKeyType="search"
                     returnKeyLabel="search"
                     value={value}
@@ -72,26 +72,32 @@ export default function DrawerNavigator() {
         ),
     }}>
         <Drawer.Screen
-            name="모아냥" 
+            name="Moanyang" 
             component={HomeScreen} 
             options={{
-                drawerLabel: 'HOME',
+                title : '홈',
             }} 
         />
         <Drawer.Screen 
             name="MY TALK" 
             component={MyTalk} 
-            // options={{drawerLabel: 'ABOUT'}} 
+            options={{
+                title : '마이 톡'
+            }} 
         />
         <Drawer.Screen 
-            name="프로필" 
+            name="Profile" 
             component={Profile}
-            // options={{drawerLabel: 'ABOUT'}} 
+            options={{
+                title : '프로필'
+            }} 
         />
         <Drawer.Screen
-            name="설정" 
+            name="Setting" 
             component={Setting} 
-            // options={{drawerLabel: 'ABOUT'}} 
+            options={{
+                title : '설정'
+            }} 
         />
     </Drawer.Navigator>
   );
