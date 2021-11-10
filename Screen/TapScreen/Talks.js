@@ -51,7 +51,7 @@ export default function Talks(){
             <Row>
                 <TouchableOpacity activeOpacity={0.5} style={styles.button} onPress={()=>{}}>
                     <Text>
-                        버튼
+                        동아리
                     </Text>
                 </TouchableOpacity>
                 <TouchableOpacity activeOpacity={0.5} style={styles.button} onPress={()=>{}}>
