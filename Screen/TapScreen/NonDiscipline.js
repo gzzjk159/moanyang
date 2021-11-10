@@ -18,17 +18,16 @@ import{
 // import _ from 'lodash';
 import styled from 'styled-components';
 const Container = styled.SafeAreaView`
+    flex : 1;
 `;
-const Scroll = styled.ScrollView`
+const OA = styled.Text`
 `;
 export default function NonDiscipline(){
     return(
         <Container>
-            <Scroll>
-                <Text>
-                    NonDiscipline
-                </Text>
-            </Scroll>
+            <OA>
+                OutdoorActivities
+            </OA>
         </Container>
     )
 }

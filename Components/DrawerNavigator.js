@@ -7,10 +7,11 @@ import {
 import { 
     createDrawerNavigator,
 } from "@react-navigation/drawer";
+
+import HomeScreen from "../Screen/DrawScreen/HomeScreen";
 import MyTalk from "../Screen/DrawScreen/MyTalk";
 import Profile from "../Screen/DrawScreen/Profile";
 import Setting from "../Screen/DrawScreen/Setting";
-import HomeScreen from "../Screen/DrawScreen/HomeScreen";
 import styled from 'styled-components/native';
 
 const Drawer = createDrawerNavigator();
