@@ -31,7 +31,7 @@ const Account = styled.View``;
 const AppInformation = styled.View``;
 const Etc = styled.View``;
 
-export default function Setting({navigation}){
+export default function SettingHome({navigation}){
     return (
         //UI 완성
         <Container>

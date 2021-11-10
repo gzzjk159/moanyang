@@ -29,7 +29,7 @@ export default function StackNavigator({navigation}){
     return (
         <Stack.Navigator>
             <Stack.Screen
-                name = "Setting"
+                name = "SettingHome"
                 component = {SettingHome}
                 options={{
                     headerShown : false,
