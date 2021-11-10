@@ -244,9 +244,6 @@
 
 import 'react-native-gesture-handler'
 import * as React from 'react';
-import{
-  StyleSheet,
-} from 'react-native';
 import StackNavigator from '../../Components/StackNavigator';
 
 export default function Setting(){

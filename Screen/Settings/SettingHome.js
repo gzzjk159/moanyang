@@ -75,14 +75,9 @@ export default function Setting({navigation}){
                 </Account>
                 <Account>
                     <MarginBody>
-                        <TouchableOpacity activeOpacity={0.5} onPress={()=> navigation.navigate('ProfileChange')}>
+                        <TouchableOpacity activeOpacity={0.5} onPress={()=>navigation.navigate('SignUp')}>
                             <Text style = {styles.border}>
-                                프로필 이미지 변경
-                            </Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity activeOpacity={0.5} onPress={()=>navigation.navigate('NameChange')}>
-                            <Text style = {styles.border}>
-                                닉네임 변경
+                                회원 가입
                             </Text>
                         </TouchableOpacity>
                         <TouchableOpacity activeOpacity={0.5} onPress={()=>navigation.navigate('Withdrawal')}>

@@ -12,10 +12,6 @@ const Container = styled.SafeAreaView`
   flex : 1;
 `;
 
-const Row = styled.View`
-  flex-direction : row;
-`;
-
 export default function App () {
   return (
       <Container>
@@ -30,19 +26,19 @@ export default function App () {
   )
 }
 
-const styles = StyleSheet.create({
-  blue : {
-     backgroundColor : '#313A96',
-  },
-  row : {
-    flexDirection : 'row',
-  },
-  searchImage : {
-    width : 50,
-    height : 50,
-  },
-  myTalkImage : {
-    width : 50,
-    height : 50,
-  },
-});
+// const styles = StyleSheet.create({
+//   blue : {
+//      backgroundColor : '#313A96',
+//   },
+//   row : {
+//     flexDirection : 'row',
+//   },
+//   searchImage : {
+//     width : 50,
+//     height : 50,
+//   },
+//   myTalkImage : {
+//     width : 50,
+//     height : 50,
+//   },
+// });

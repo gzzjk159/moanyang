@@ -24,15 +24,10 @@ const Talk = styled.View`
 `;
 
 export default function Talks(){
-    const [search , setsearch] = React.useState('');
-    const clickSearch = ({value}) => {
-        onchange = {}
-    }
-
     return(
         <Container style={styles.gray}>
             <Row>
-                <TouchableOpacity activeOpacity={0.5} style={styles.button} onPress={()=>clickSearch('비교과')}>
+                <TouchableOpacity activeOpacity={0.5} style={styles.button} onPress={()=>{}}>
                     <Text>
                         비교과
                     </Text>

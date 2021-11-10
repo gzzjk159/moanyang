@@ -4,8 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import SettingHome from '../Screen/Settings/SettingHome';
 // 계정
-import ProfileChange from '../Screen/Settings/Account/ProfileChange';
-import NameChange from '../Screen/Settings/Account/NameChange';
+import SignUp from '../Screen/Settings/Account/SignUp';
 import Logout from '../Screen/Settings/Account/Logout';
 import Withdrawal from '../Screen/Settings/Account/Withdrawal';
 // 앱 설정
@@ -33,33 +32,22 @@ export default function StackNavigator({navigation}){
                 name = "Setting"
                 component = {SettingHome}
                 options={{
-                    title : '설정',
-                    headerTintColor : "#313A96",
-                    headerTitleStyle : {
-                        fontWeight : 'bold'
-                    },
-                    headerTitleAlign : 'center'
+                    headerShown : false,
+                    // title : '설정',
+                    // headerTintColor : "#313A96",
+                    // headerTitleStyle : {
+                    //     fontWeight : 'bold'
+                    // },
+                    // headerTitleAlign : 'center'
                 }} 
             />
 
             {/* 계정  */}
             <Stack.Screen
-                name = "ProfileChange"
-                component = {ProfileChange}
+                name = "SignUp"
+                component = {SignUp}
                 options={{
-                    title : '프로필 이미지 변경',
-                    headerTintColor : "#313A96",
-                    headerTitleStyle : {
-                        fontWeight : 'bold'
-                    },
-                    headerTitleAlign : 'center'
-                }} 
-            />
-            <Stack.Screen
-                name = "NameChange"
-                component = {NameChange}
-                options={{
-                    title : '닉네임 변경',
+                    title : '회원 가입',
                     headerTintColor : "#313A96",
                     headerTitleStyle : {
                         fontWeight : 'bold'
