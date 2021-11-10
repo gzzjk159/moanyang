@@ -1,131 +1,142 @@
-
-  [
-    {
-      "id": 1,
-      "name": "[혁신] 내일개발을 위한 실무능력 향상프로그램 - 직무소개 영상시청 프로그램",
-      "DAY": 25,
-      "see": 423,
-      "url": "../image/non/non01.jpg"
-    },
+[
  {
-    "id": 2,
-    "name": "[혁신] 2021학년도 A.R.I. 우수인재인증",
-    "DAY": 30,
-    "see": 512,
-    "url": "../image/non/non02.jpg"
-  },
-  {
-    "id": 3,
-    "name": "[혁신]내일개발을 위한 실무능력 향상 프로그램-자기소개서 작성 멘토링11/30~12/1",
-    "DAY": 10,
-    "url": "../image/non/non03.jpg"
-  },
-  {
-    "id": 4,
-    "name": "[일자리] 티젠과 함께하는 채용연계 멘토링",
-    "DAY": 5,
-    "url": "../image/non/non04.jpg"
-  },
-  {
-    "id": 5,
-    "name": "2021 창업 사업화 지원 팀모집",
-    "DAY": 3,
-    "url": "../image/non/non05.jpg"
-  },
-  {
-    "id": 6,
-    "name": "[혁신] 2021-2 학습상담 및 학습케어",
-    "DAY": 20,
-    "url": "../image/non/non06.jpg"
-  },
-  {
-    "id": 7,
-    "name": "[혁신] 2021-2 교과연계 LSD 체험⦁실천 프로그램",
-    "DAY": 33,
-    "url": "../image/non/non07.jpg"
-  },
-  {
-    "id": 8,
-    "name": "[혁신]내일개발을 위한 실무능력 향상 프로그램-자기소개서작성경진대회",
-    "DAY": 18,
-    "url": "../image/non/non08.jpg"
-  },
-  {
-    "id": 9,
-    "name": "[혁신]2021-2 교육콘텐츠개발",
-    "DAY": 28,
-    "url": "../image/non/non09.jpg"
-  },
-  {
-    "id": 10,
-    "name": "[혁신]내일진출스터디-면접 멘토링 12/2~12/3",
-    "DAY": 54,
-    "url": "../image/non/non10.jpg"
-  },
-  {
-    "id": 11,
-    "name": "[일자리] 해외취업특강",
-    "DAY": 17,
-    "url": "../image/non/non11.jpg"
-  },
-  {
-    "id": 12,
-    "name": "[혁신] 2021 AYU 게임 개발 대회 (A반)",
-    "DAY": 5,
-    "url": "../image/non/non12.jpg"
-  },
-  {
-    "id": 13,
-    "name": "[혁신]Life DESIGN 워크숍 2(진로탐색)",
-    "DAY": 22,
-    "url": "../image/non/non13.jpg"
-  },
-  {
-    "id": 14,
-    "name": "[혁신]안양시문화재단 인턴쉽 모집(문화예술 모니터링단)",
-    "DAY": 34,
-    "url": "../image/non/non14.jpg"
-  },
-  {
-    "id": 15,
-    "name": "[혁신] 2021-2 비교과 모니터링 서포터즈",
-    "DAY": 18,
-    "url": "../image/non/non15.jpg"
-  },
-  {
-    "id": 16,
-    "name": "[혁신] 2020-1 LSD 창의 프로그램(ARI MAKERS)",
-    "DAY": 54,
-    "url": "../image/non/non16.jpg"
-  },
-  {
-    "id": 17,
-    "name": "[혁신] 2020-1 협업하는 Frontier",
-    "DAY": 32,
-    "url": "../image/non/non17.jpg"
-  },
-  {
-    "id": 18,
-    "name": "2021 청년친화 강소기업 탐방기",
-    "DAY": 50,
-    "url": "../image/non/non18.jpg"
-  },
-  {
-    "id": 19,
-    "name": "[혁신] 내일역량 강화를 위한 진로.취업 Fair",
-    "DAY": 10,
-    "url": "../image/non/non19.jpg"
-  },
-  {
-    "id": 20,
-    "name": "[혁신] 2021-2 동기유발형 학습공모전 - 나만의 학습법",
-    "DAY": 8,
-    "url": "../image/non/non20.jpg"
-  },
-  {
-    "id": 21,
-    "name": "[혁신] 2021-2 동기유발형 학습공모전 - 명강의 에세이",
-    "DAY": 2,
-    "url": "../image/non/non21.jpg"
-  }
+   "id": 1,
+   "name": "[혁신] 내일개발을 위한 실무능력 향상프로그램 - 직무소개 영상시청 프로그램",
+   "day": 25,
+   "see": 957,
+   "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1581"
+ },
+ {
+   "id": 2,
+   "name": "[혁신] 2021학년도 A.R.I. 우수인재인증",
+   "day": 30,
+   "see": 869,
+   "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1649"
+ },
+ {
+   "id": 3,
+   "name": "[혁신]내일개발을 위한 실무능력 향상 프로그램-자기소개서 작성 멘토링11/30~12/1",
+   "day": 10,
+   "see": 854,
+   "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1604"
+ },
+ {
+   "id": 4,
+   "name": "[일자리] 티젠과 함께하는 채용연계 멘토링",
+   "day": 21,
+   "see": 798,
+   "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1579"
+ },
+ {
+   "id": 5,
+   "name": "2021 창업 사업화 지원 팀모집",
+   "day": 33,
+   "see": 731,
+   "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1623"
+ },
+ {
+   "id": 6,
+   "name": "[혁신] 2021-2 학습상담 및 학습케어",
+   "day": 2,
+   "see": 696,
+   "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1519"
+ },
+ {
+   "id": 7,
+   "name": "[혁신] 2021-2 교과연계 LSD 체험⦁실천 프로그램",
+   "day": 3,
+   "see": 573,
+   "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1591"
+ },
+ {
+   "id": 8,
+   "name": "[혁신]내일개발을 위한 실무능력 향상 프로그램-자기소개서작성경진대회",
+   "day": 5,
+   "see": 520,
+   "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1594"
+ },
+ {
+   "id": 9,
+   "name": "[혁신]2021-2 교육콘텐츠개발",
+   "day": 6,
+   "see": 509,
+   "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1573"
+ },
+ {
+   "id": 10,
+   "name": "[혁신]내일진출스터디-면접 멘토링 12/2~12/3",
+   "day": 3,
+   "see": 479,
+   "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1612"
+ },
+ {
+   "id": 11,
+   "name": "[일자리] 해외취업특강",
+   "day": 17,
+   "see": 453,
+   "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1648"
+ },
+ {
+   "id": 12,
+   "name": "[혁신] 2021 AYU 게임 개발 대회 (A반)",
+   "day": 5,
+   "see": 420,
+   "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1618"
+ },
+ {
+   "id": 13,
+   "name": "[혁신]Life DESIGN 워크숍 2(진로탐색)",
+   "day": 22,
+   "see": 401,
+   "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1622"
+ },
+ {
+   "id": 14,
+   "name": "[혁신]안양시문화재단 인턴쉽 모집(문화예술 모니터링단)",
+   "day": 34,
+   "see": 376,
+   "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1447"
+ },
+ {
+   "id": 15,
+   "name": "[혁신] 2021-2 비교과 모니터링 서포터즈",
+   "day": 11,
+   "see": 354,
+   "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1612"
+ },
+ {
+   "id": 16,
+   "name": "[혁신] 2020-1 LSD 창의 프로그램(ARI MAKERS)",
+   "day": 50,
+   "see": 321,
+   "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1012"
+ },
+ {
+   "id": 17,
+   "name": "[혁신] 2020-1 협업하는 Frontie",
+   "day": 32,
+   "see": 218,
+   "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1013"
+ },
+ {
+   "id": 18,
+   "name": "2021 청년친화 강소기업 탐방기",
+   "day": 40,
+   "see": 167,
+   "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1524"
+ },
+ {
+   "id": 19,
+   "name": "[혁신] 내일역량 강화를 위한 진로.취업 Fair",
+   "day": 10,
+   "see": 132,
+   "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1654"
+ },
+ {
+   "id": 20,
+   "name": "[혁신] 2021-2 동기유발형 학습공모전 - 나만의 학습법",
+   "day": 8,
+   "see": 73,
+   "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1653"
+ }
 ]
