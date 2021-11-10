@@ -32,7 +32,7 @@ export default function NonDiscipline() {
     return (
         <Container>
             <Scroll>
-                <View style={{ backgroundColor: '#D9D9D9', }}>
+                <View style={{  }}>
 
 
 
@@ -40,16 +40,16 @@ export default function NonDiscipline() {
                     <Text style={styles.HotNonDiscipline}>
                         인기 비교과
                     </Text>
-                    <View style={{ backgroundColor: '#313A96', height: 8, }} />
+                    <View style={{ backgroundColor: '#313A96', height: 5, }} />
 
                     <View style={{ flexDirection: 'row', }}>
                         {
 
                             tempData.map(data => {
                                 return (
-                                    <View style={{ height: 300, flex: 1, }}>
+                                    <View style={{ height: 300, flex: 1, backgroundColor: '#FFFFFF', }}>
 
-                                        <View style={{ flex: 1 }} key={data.id}>
+                                        <View style={{ flex: 1,  }} key={data.id}>
 
                                             <View style={{ flex: 1.7, }}>
                                                 <Image style={styles.ImageContent}
@@ -85,20 +85,20 @@ export default function NonDiscipline() {
                     </View>
 
 
-                    <View style={{ backgroundColor: '#313A96', height: 8, }} />
+                    <View style={{ backgroundColor: '#313A96', height: 5, }} />
 
                     <Text style={styles.magam}>
                         마감 임박
                     </Text>
 
-                    <View style={{ backgroundColor: '#313A96', height: 8, }} />
+                    <View style={{ backgroundColor: '#313A96', height: 5, }} />
 
                     <View style={{ flexDirection: 'row' }}>
                         {
 
                             tempData.map(data => {
                                 return (
-                                    <View style={{ height: 300, flex: 1, }}>
+                                    <View style={{ height: 300, flex: 1, backgroundColor: '#FFFFFF',}}>
 
                                         <View style={{ flex: 1 }} key={data.id}>
 
@@ -217,13 +217,13 @@ const styles = StyleSheet.create({
         fontSize: 23,
         padding: 10,
         marginTop: 5,
-        backgroundColor: '#d9d9d9',
+        
     },
     magam: {
         fontWeight: 'bold',
         fontSize: 23,
         padding: 10,
-        backgroundColor: '#D9D9D9',
+        
     },
     ImageContent: {
         height: 180,
