@@ -69,6 +69,7 @@ export default function DrawerNavigator() {
                     />
                 </SearchBarWrapper>
 
+                <Image style={styles.message} source={require('../image/message.png')}/>
             </View> 
         ),
     }}>
@@ -117,9 +118,9 @@ const styles = StyleSheet.create({
         height: 35,  
     },
     message: {
-        marginTop: 10,
-        marginLeft: 16,
-        width: 40,
-        height: 35,
+        marginTop: 11,
+        marginLeft: 14,
+        width: 43,
+        height: 37,
     }
   });
