@@ -69,6 +69,8 @@ export default function DrawerNavigator() {
                     value={value}
                     />
                 </SearchBarWrapper>
+
+                <Image style={styles.message} source={require('../assets/image/message.png')}/>
             </View> 
         ),
     }}>

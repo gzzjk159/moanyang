@@ -1,34 +1,41 @@
 {
   "project_info": {
-    "project_number": "622810024779",
-    "firebase_url": "https://moayu-e4b4e-default-rtdb.firebaseio.com",
-    "project_id": "moayu-e4b4e",
-    "storage_bucket": "moayu-e4b4e.appspot.com"
+    "project_number": "102114325299",
+    "project_id": "momo-a8066",
+    "storage_bucket": "momo-a8066.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:622810024779:android:14db0474bb3aa0f334b6ce",
+        "mobilesdk_app_id": "1:102114325299:android:e27f81ba749cfa24cb4446",
         "android_client_info": {
           "package_name": "com.moayu"
         }
       },
       "oauth_client": [
         {
-          "client_id": "622810024779-c22tuarakol0clmj4hsvn8ho041ncm8h.apps.googleusercontent.com",
+          "client_id": "102114325299-377cc7louea8e96nb3q99iph63o2ffpb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.moayu",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "102114325299-1pcit34c2nauvigc5roig1pb7ni4ni36.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCA6SVzrZEmElaD28234PrXi4CmjDiIl8A"
+          "current_key": "AIzaSyD0Hq4E5LRomQfYSfcR-e1VtuXkHoxMy1c"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "622810024779-c22tuarakol0clmj4hsvn8ho041ncm8h.apps.googleusercontent.com",
+              "client_id": "102114325299-1pcit34c2nauvigc5roig1pb7ni4ni36.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
