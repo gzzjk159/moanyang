@@ -18,12 +18,12 @@ import {
 } from 'react-native';
 // import _ from 'lodash';
 import styled from 'styled-components';
-
+const Container = styled.SafeAreaView``;
+const Scroll = styled.ScrollView``;
 
 
 export default function NonDiscipline() {
-    const Container = styled.SafeAreaView``;
-    const Scroll = styled.ScrollView``;
+    
 
 
     const [tempData, setTempData] = React.useState(NonData.slice(0, 2));
