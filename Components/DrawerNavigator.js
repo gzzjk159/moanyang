@@ -3,16 +3,19 @@ import {
     Image,
     View, 
     StyleSheet, 
+    TouchableOpacity,
 } from "react-native";
 import { 
     createDrawerNavigator,
 } from "@react-navigation/drawer";
 
 import HomeScreen from "../Screen/DrawScreen/HomeScreen";
+import Toptap from "../Components/TopTapNavigator"
 import MyTalk from "../Screen/DrawScreen/MyTalk";
 import Profile from "../Screen/DrawScreen/Profile";
 import Setting from "../Screen/DrawScreen/Setting";
 import styled from 'styled-components/native';
+import { useNavigation } from '@react-navigation/core';
 
 const Drawer = createDrawerNavigator();
 
@@ -39,6 +42,7 @@ const SearchIcon = styled.Image`
 
 export default function DrawerNavigator() {
     const [value, setValue] = useState('');
+    const navi = useNavigation();
   return (
     <Drawer.Navigator 
     screenOptions={{
@@ -54,9 +58,9 @@ export default function DrawerNavigator() {
         
         headerTitle: () => (
             <View style={styles.row}>
-                
+                <TouchableOpacity onPress={()=> navi.navigate("Moanyang", {HomeScreen})}>
                 <Image style={styles.moanyang} source={require('../assets/image/moanyang.png')}/>
-                    
+                 </TouchableOpacity>   
                 <SearchBarWrapper style= {styles.search}>
                     <SearchIcon source={require('../assets/image/searchImage.png')} />
                     <SearchInput
@@ -70,7 +74,9 @@ export default function DrawerNavigator() {
                     />
                 </SearchBarWrapper>
 
-                <Image style={styles.message} source={require('../assets/image/message.png')}/>
+                <TouchableOpacity onPress={()=> navi.navigate("MY TALK", {MyTalk})}>
+                <Image style={styles.message}source={require("../assets/image/message.png")}/>
+                </TouchableOpacity>
             </View> 
         ),
     }}>

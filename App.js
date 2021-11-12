@@ -7,11 +7,16 @@ import{
 } from 'react-native';
 import styled from 'styled-components/native';
 import DrawerNavigator from './Components/DrawerNavigator';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import StackNavigator from './Components/StackNavigator';
+import Home from './Screen/DrawScreen/HomeScreen'
 
 const Container = styled.SafeAreaView`
   flex : 1;
 `;
 
+const Stack = createStackNavigator();
 export default function App () {
   return (
       <Container>
@@ -20,7 +25,11 @@ export default function App () {
           backgroundColor="#000000"
         />
         <NavigationContainer>
-          <DrawerNavigator/>
+          
+          <Home/>
+          {/* <DrawerNavigator/> */}
+          
+          
         </NavigationContainer>
       </Container>
   )

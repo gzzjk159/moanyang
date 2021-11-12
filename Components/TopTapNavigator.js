@@ -19,6 +19,7 @@ export default function Tabs(){
         name = "공모전" 
         component = {Competition}
       />
+     
       <Tab.Screen 
         name = "대외활동" 
         component = {OutdoorActivities}
