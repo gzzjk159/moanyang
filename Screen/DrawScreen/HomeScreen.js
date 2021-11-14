@@ -5,21 +5,23 @@ import LoginNavigator from '../../Components/LoginNavigator';
 import { createStackNavigator } from '@react-navigation/stack';
 const Stack = createStackNavigator();
 
-export default function HomeScreen( ) {
+export default function HomeScreen() {
   return (
-    <Stack.Navigator>
-            <Stack.Screen
-            name ="LoginNav"
-            component ={LoginNavigator}
-            options={{
-              headerShown : false,
-            }}
-            />
-      
-      
-    </Stack.Navigator>
+    <>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="LoginNav"
+          component={LoginNavigator}
+          options={{
+            headerShown: false,
+          }}
+        />
+
+        {/* <TopTapNavigator/>  */}
+      </Stack.Navigator>
+    </>
     // <LoginNavigator/>
     /* <TopTapNavigator/> */
-    
+
   );
 };

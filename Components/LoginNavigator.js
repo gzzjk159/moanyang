@@ -5,6 +5,7 @@ import TopTapNavigator from './TopTapNavigator';
 import FirstPage from './FirstPage';
 import LoginPage from './LoginPage';
 import SignupPage from './SignupPage';
+import indx from './index';
 
 const Stack = createStackNavigator();
 
@@ -18,12 +19,11 @@ export default function StackNavigator({navigation}){
                     headerShown : false,   
                 }} 
             />
-            
             <Stack.Screen
                 name = "Login"
                 component = {LoginPage}
                 options={{
-                    headerShown : false,   
+                headerShown : false,   
                 }} 
             />
             <Stack.Screen
@@ -32,6 +32,13 @@ export default function StackNavigator({navigation}){
                 options={{
                     headerShown : false,   
                 }} 
+            />
+            <Stack.Screen
+                name = "index"
+                component = {indx}
+                options={{
+                headerShown : false,   
+            }}
             />
             
         </Stack.Navigator>

@@ -10,12 +10,13 @@ import {
 } from "@react-navigation/drawer";
 
 import HomeScreen from "../Screen/DrawScreen/HomeScreen";
-import Toptap from "../Components/TopTapNavigator"
+
 import MyTalk from "../Screen/DrawScreen/MyTalk";
 import Profile from "../Screen/DrawScreen/Profile";
 import Setting from "../Screen/DrawScreen/Setting";
 import styled from 'styled-components/native';
 import { useNavigation } from '@react-navigation/core';
+import Nonhome from './Nonhome';
 
 const Drawer = createDrawerNavigator();
 
@@ -40,7 +41,7 @@ const SearchIcon = styled.Image`
   height: 18px;
 `;
 
-export default function DrawerNavigator() {
+export default function DrawerNavigator({navigation}) {
     const [value, setValue] = useState('');
     const navi = useNavigation();
   return (
@@ -67,7 +68,7 @@ export default function DrawerNavigator() {
                     autoCapitalize="none"
                     autoCorrect={false}
                     onChangeText={setValue}
-                    placeholder="검색어를 입력해 주세요."s
+                    placeholder="검색어를 입력해 주세요."
                     returnKeyType="search"
                     returnKeyLabel="search"
                     value={value}
@@ -82,7 +83,7 @@ export default function DrawerNavigator() {
     }}>
         <Drawer.Screen
             name="Moanyang" 
-            component={HomeScreen} 
+            component={Nonhome} 
             options={{
                 title : '홈',
             }} 
@@ -94,6 +95,8 @@ export default function DrawerNavigator() {
                 title : '마이 톡'
             }} 
         />
+        
+        
         <Drawer.Screen 
             name="Profile" 
             component={Profile}

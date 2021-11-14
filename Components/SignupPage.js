@@ -1,24 +1,67 @@
 
 import * as React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { useState } from 'react';
+import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput, Button, } from 'react-native';
 
 
-function SignupPage({ navigation}){
+function LoginPage({ navigation }) {
 
- 
-    return (
-      <View style={styles.total}>
-        <View style={styles.AppName}>
-          <Text style={{ fontSize: 50 }}>
-            Signup
+  const [value, setValue] = useState('');
+
+  return (
+    <View style={{ height: 720, backgroundColor: '#313A96', }}>
+      <View style={{ flex: 1, backgroundColor: 'white', margin: 15, marginBottom: 20, }}>
+        <View style={{ flex: 2, }}>
+
+
+          <Text style={{
+            flex: 1, fontSize: 48, fontWeight: 'bold',
+            textAlign: 'center', textAlignVertical: 'center', color: '#313A96',
+          }}>
+            회원가입
           </Text>
+          <View style={{ flex: 1, }}>
+            <Image style={{ width: 200, height: 200, alignSelf: 'center', alignSelf: 'center', }} source={require('../assets/image/moanyang.png')} />
+            {/* <Text style={{ flex: 1,fontSize: 50, fontWeight:'bold', color:'#FFFFFF',
+                    textAlign:'center',textAlignVertical:'center', }}>
+                    모아냥
+                </Text> */}
+          </View>
+
+
         </View>
-        <View style={styles.Inputs}>
-          
+
+        <View style={{ flex: 1, }}>
+          <View style={{ flex: 1, }}>
+            <View>
+              <View style={{ padding: 10, }}>
+                <TextInput style={styles.ID} value={value} placeholder="example@gmail.com" onChangeText={setValue} autoCorrect={false} autoCapitalize="none">
+
+                </TextInput>
+              </View>
+              <View style={{ padding: 10, }}>
+                <TextInput style={styles.Password} value={value} placeholder="password" onChangeText={setValue} autoCorrect={false} autoCapitalize="none">
+
+                </TextInput>
+              </View>
+              <View style={{ padding: 10, }}>
+
+                <TouchableOpacity style={styles.LoginBtn} onPress={() => navigation.navigate('Login')}>
+                  <Text style={styles.LoginText}> 회원가입 </Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+
+
+
+          </View>
+
         </View>
       </View>
-    );
-  }
+
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   total: {
@@ -37,6 +80,54 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  search: {
+    width: 200,
+    height: 35,
+  },
+  ID: {
+    alignSelf: 'center',
+    alignItems: 'center',
+    borderColor: '#313A96',
+    fontWeight: 'bold',
+    borderWidth: 2,
+    width: 350,
+    height: 50,
+    backgroundColor: '#FFFFFF',
+    justifyContent: 'center',
+    borderRadius: 5,
+    paddingLeft: 10,
+  },
+  Password: {
+    alignSelf: 'center',
+    alignItems: 'center',
+    borderColor: '#313A96',
+    fontWeight: 'bold',
+    borderWidth: 2,
+    width: 350,
+    height: 50,
+    backgroundColor: '#FFFFFF',
+    justifyContent: 'center',
+    borderRadius: 5,
+    paddingLeft: 10,
+  },
+  LoginBtn: {
+    alignSelf: 'center',
+    alignItems: 'center',
+    borderColor: '#313A96',
+    fontWeight: 'bold',
+    borderWidth: 2,
+    width: 350,
+    height: 50,
+    backgroundColor: 'yellow',
+    justifyContent: 'center',
+    borderRadius: 10,
+
+  },
+  LoginText: {
+    fontSize: 25,
+    color: 'black',
+    fontWeight: 'bold',
+  },
 
 });
-export default SignupPage;
+export default LoginPage;

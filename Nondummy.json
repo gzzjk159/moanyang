@@ -7,10 +7,7 @@
    "day": 25,
    "see": 957,
    "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1581",
-   "image": "./assets/image/Sample1.png",
-   "URL": "https://ifh.cc/g/WJnjPt.jpg"
-   
-   
+   "image": "https://ifh.cc/g/WJnjPt.jpg"
    
  },
  {
@@ -19,7 +16,7 @@
    "day": 30,
    "see": 869,
    "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1649",
-   "image": "https://ifh.cc/g/WJnjPt.jpg"
+   "image": "https://ifh.cc/g/qcwEfL.png"
    
  },
  {
@@ -28,7 +25,7 @@
    "day": 10,
    "see": 854,
    "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1604",
-   "image": "https://ifh.cc/g/WJnjPt.jpg"
+   "image": "https://ifh.cc/g/2YdkzM.jpg"
    
  },
  {
@@ -37,7 +34,7 @@
    "day": 21,
    "see": 798,
    "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1579",
-   "image": "https://ifh.cc/g/WJnjPt.jpg"
+   "image": "https://ifh.cc/g/GlE2C4.jpg"
  },
  {
    "id": 5,
@@ -45,7 +42,7 @@
    "day": 33,
    "see": 731,
    "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1623",
-   "image": "https://ifh.cc/g/WJnjPt.jpg"
+   "image": "https://ifh.cc/g/Vv0GEm.jpg"
  },
  {
    "id": 6,
@@ -53,7 +50,7 @@
    "day": 2,
    "see": 696,
    "site": "https://ari.anyang.ac.kr/user/subject/nsubject/view.do?idx=1519",
-   "image": "https://ifh.cc/g/WJnjPt.jpg"
+   "image": "https://ifh.cc/g/jroUq6.jpg"
  },
  {
    "id": 7,
@@ -144,7 +141,7 @@
    "image": "https://ifh.cc/g/WJnjPt.jpg"
  },
  {
-   "id": 18,
+   "id": 8,
    "name": "2021 청년친화 강소기업 탐방기",
    "day": 40,
    "see": 167,

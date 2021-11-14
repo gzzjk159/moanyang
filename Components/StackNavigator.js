@@ -23,19 +23,22 @@ import TermService from '../Screen/Settings/AppInformation/TermsService';
 import DarkLightMode from '../Screen/Settings/Etc/DarkLightMode';
 import InfoConsentSetting from '../Screen/Settings/Etc/InfoConsentSetting';
 import FirstPage from './FirstPage';
+import Toptabs from './TopTapNavigator';
+import Tabs from './TopTapNavigator';
+
 const Stack = createStackNavigator();
 
 export default function StackNavigator({navigation}){
     return (
         <Stack.Navigator>
             <Stack.Screen
-                name = "SettingHome"
+                name = "Homee"
                 component = {FirstPage}
                 options={{
-                    headerShown : false,
-                    
+                    headerShown : false,    
                 }} 
             />
+            
 
             <Stack.Screen
                 name = "SettingHome"

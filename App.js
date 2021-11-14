@@ -10,7 +10,9 @@ import DrawerNavigator from './Components/DrawerNavigator';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import StackNavigator from './Components/StackNavigator';
-import Home from './Screen/DrawScreen/HomeScreen'
+import Home from './Screen/DrawScreen/HomeScreen';
+import hhs from './Components/LoginNavigator';
+
 
 const Container = styled.SafeAreaView`
   flex : 1;
@@ -25,16 +27,18 @@ export default function App () {
           backgroundColor="#000000"
         />
         <NavigationContainer>
-          
+
+                 
           <Home/>
-          {/* <DrawerNavigator/> */}
+          
           
           
         </NavigationContainer>
+        
       </Container>
   )
 }
-
+{/* <DrawerNavigator/> */}
 // const styles = StyleSheet.create({
 //   blue : {
 //      backgroundColor : '#313A96',
