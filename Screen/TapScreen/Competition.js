@@ -1,60 +1,108 @@
 import 'react-native-gesture-handler'
 import * as React from 'react';
-import{
-  Text,View,StyleSheet,Image,image,
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
+//import { createStackNavigator } from '@react-navigation/stack';
+import NonData from '../../compdummy.json';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { FlatList } from 'react-native';
+import { LogBox } from 'react-native';
+import { useEffect } from 'react';
+
+import {
+    Button,
+    Dimensions,
+    StyleSheet,
+    SafeAreaView,
+    View,
+    Text,
+    ScrollView,
+    Image,
+    TextInput,
+    Touchable,
+    StatusBar,
+    Scroll,
+
+
 } from 'react-native';
+// import _ from 'lodash';
 import styled from 'styled-components';
-import { SliderBox } from 'react-native-image-slider-box';
+import FastImage from 'react-native-fast-image';
+import ImageModal from 'react-native-image-modal';
 
 
-const Container = styled.SafeAreaView`
-    flex : 1;
-`;
-const Scroll = styled.ScrollView`
-`;
-
-export default function Competition(){
+// components
+import itemCompent from "./Item_Component";
+import ItemSolo from './itemsolo';
+import { template } from '@babel/core';
 
 
-    return(
+
+export default function NonDiscipline() {
+    const Container = styled.SafeAreaView``;
+    const Scroll = styled.ScrollView``;
+
+    const [tempData, SetTempData] = React.useState(NonData.slice(0, 6));
+    const [magamData, setTemp] = React.useState(NonData.slice(6, 12));
+    const [moreData, setData] = React.useState(NonData.slice(12, 20));
+
+    useEffect(() => {
+        LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
+    }, [])
+    return (
         <Container>
             <Scroll>
-            <View style={{ flex: 1, backgroundColor: 'yellow', height: 270, }}>
-          <SliderBox style={{ width: 200, height: 250, alignItems:'center', alignSelf:'center', resizeMode: 'stretch', marginTop: 10,}}
-            
-            images={[
-              require('../../assets/image/non/non01.jpg'),
-              require('../../assets/image/non/non02.png'),
-              require('../../assets/image/non/non03.jpg'),
-              require('../../assets/image/non/non04.jpg'),
-              require('../../assets/image/non/non05.jpg')
-            ]}
-            
-            autoplay
-            circleLoop
-          />
-        </View>
-            
-
-                <Text>
-                    Competition
+                <Text style={styles.HotNonDiscipline}>
+                    인기 공모전
                 </Text>
-        <View>
-        <Image style= {{width: 50, height: 50}}
-          source={require('../../assets/image/non/non01.jpg')}
-        />
-        <Image
-          style={{width: 50, height: 50}}
-          source={{uri: 'https://ifh.cc/g/WJnjPt.jpg'}}
-        />
-        <Image
-          style={{width: 66, height: 58}}
-          source={{uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg=='}}
-        />
-      </View>
-            
-       
+                <View style= {{backgroundColor:'#313A96', height: 3, }}/>
+
+                     <SafeAreaView> 
+                     <FlatList
+                    
+                        data={tempData}
+                        renderItem={(itemCompent)}
+                        keyExtractor={item => item.id}
+                        numColumns={2}
+                    />
+                    </SafeAreaView>
+                
+                <View style= {{ marginTop: 5, borderColor:'#313A96', borderTopWidth: 3, borderBottomWidth: 3,}}>
+                <Text style={styles.HotNonDiscipline}>
+                    마감 임박
+                </Text>
+               </View>
+               <SafeAreaView>
+                    <FlatList
+                    
+                        data={magamData}
+                        renderItem={(itemCompent)}
+                        keyExtractor={item => item.id}
+                        numColumns={2}
+                    />
+                    </SafeAreaView> 
+                    <View style= {{backgroundColor:'#313A96', height: 15, }}/>
+               <SafeAreaView>
+                    <FlatList
+                    
+                        data={moreData}
+                        renderItem={(ItemSolo)}
+                        keyExtractor={item => item.id}
+                        numColumns={1}
+                    />
+                    </SafeAreaView>
+                
+                    <View style= {{backgroundColor:'#313A96', height: 50, }}/>
+                
             </Scroll>
-        </Container>
-    )
+        </Container >
+    );
 }
+
+const styles = StyleSheet.create({
+    HotNonDiscipline: { // 인기 비교과 - 글자
+        fontWeight: 'bold',
+        fontSize: 23,
+        padding: 10,
+        marginTop: 5,
+    },
+});

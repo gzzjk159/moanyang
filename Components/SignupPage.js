@@ -9,7 +9,7 @@ function LoginPage({ navigation }) {
   const [value, setValue] = useState('');
 
   return (
-    <View style={{ height: 720, backgroundColor: '#313A96', }}>
+    <View style={{ flex: 1, backgroundColor: '#313A96', }}>
       <View style={{ flex: 1, backgroundColor: 'white', margin: 15, marginBottom: 20, }}>
         <View style={{ flex: 2, }}>
 

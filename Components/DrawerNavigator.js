@@ -59,7 +59,7 @@ export default function DrawerNavigator({navigation}) {
         
         headerTitle: () => (
             <View style={styles.row}>
-                <TouchableOpacity onPress={()=> navi.navigate("Moanyang", {HomeScreen})}>
+                <TouchableOpacity onPress={()=> navi.navigate("Moanyang", {Nonhome})}>
                 <Image style={styles.moanyang} source={require('../assets/image/moanyang.png')}/>
                  </TouchableOpacity>   
                 <SearchBarWrapper style= {styles.search}>
@@ -130,13 +130,13 @@ const styles = StyleSheet.create({
         marginTop : 13,
     },
     search : {
-        width:  200,
+        width:  205,
         height: 35,  
     },
     message: {
         marginTop: 12,
-        marginLeft: 16,
-        width: 40,
+        marginLeft: 20,
+        width: 45,
         height: 35,
     }
   });

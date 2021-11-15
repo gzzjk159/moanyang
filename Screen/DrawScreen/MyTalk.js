@@ -9,12 +9,17 @@ import {
   Text,
   TouchableOpacity,
   Image,
+  SafeAreaView,
+
 } from 'react-native';
 // import _ from 'lodash';
 import styled from 'styled-components';
 import { SliderBox } from 'react-native-image-slider-box';
 import ImageModal from 'react-native-image-modal';
-import NonData from '../../Nondummy.json';
+import RoomData from '../../Roomdummy.json';
+import { FlatList } from 'react-native';
+import itemCompent from "../TapScreen/itemRoom";
+
 const Container = styled.SafeAreaView`
     flex : 1;
 `;
@@ -23,93 +28,25 @@ const Scroll = styled.ScrollView`
 
 
 export default function MyTalk() {
-  const [tempData, setTempData] = React.useState(NonData.slice(0, 1));
+
+  const [tempData, setTempData] = React.useState(RoomData.slice(0, 5));
   return (
 
     <Container>
+      <View style={{height:50, backgroundColor: '#313A96',}}>
+        <Text style={{alignContent:'center',justifyContent:'center',alignSelf:'center',alignItems:'center', fontSize: 22, color:'#FFFFFF',fontWeight:'bold', paddingTop:7,}}>MY Talk</Text>
+      </View>
       <Scroll>
-
-        <View style={{ flex: 1, backgroundColor: 'yellow', height: 270, }}>
-          <SliderBox style={{ width: 200, height: 250, alignItems:'center', alignSelf:'center', resizeMode: 'stretch', marginTop: 10,}}
+      
+      <SafeAreaView>
+                        <FlatList
+                        data={tempData}
+                        renderItem={(itemCompent)}
+                        keyExtractor={item => item.id}
+                        numColumns={1}
+                        />
+      </SafeAreaView>
             
-            images={[
-              require('../../assets/image/non/non01.jpg'),
-              require('../../assets/image/non/non02.png'),
-              require('../../assets/image/non/non03.jpg'),
-              require('../../assets/image/non/non04.jpg'),
-              require('../../assets/image/non/non05.jpg')
-            ]}
-            
-            autoplay
-            circleLoop
-          />
-        </View>
-
-        
-        <View style={{ }}>
-        {
-          tempData.map(data=> {
-
-
-
-            return (
-
-              <View style={{ flex: 1, flexDirection: 'row', height: 390,  }}>
-
-                <View style={{ flex: 1, backgroundColor: 'black', opacity: 0.2 ,}}>
-
-                </View>
-
-                
-                <View style={{  flex: 6, borderWidth: 2,borderColor:'#313A96',  }} >  
-
-                  <View style={{ flex: 2, alignSelf: 'center',  }}>
-                    <ImageModal
-                      style={styles.ImgModal}
-                      source={require('../../assets/image/non/non01.jpg')} />
-                  </View>
-
-                  <View style={{ flex: 1, }}>
-                    <Text numberOfLines={2} style={styles.mapname}>
-                      {data.name}
-                    </Text>
-
-
-                    <View style={{ flex: 0.4,  }}>
-                      <View style={{ flexDirection: 'row', }}>
-                        <Text style={styles.dday}> D - {data.day} </Text>
-                        <Text style={styles.see}> 조회수: {data.see}  </Text>
-                      </View>
-                    </View>
-                    <View style={{ flex: 1,  }}>
-                      <View style={{ flex: 1, flexDirection:'row', borderTopWidth: 1,borderTopColor:'#313A96', }}>
-                        
-                        <TouchableOpacity style= {styles.infocover}>
-                            <Text style={styles.information}>정보 보기</Text>
-                        </TouchableOpacity>
-
-                        <TouchableOpacity style={styles.Teamcover}>
-                            <Text style={styles.Team}>팀원 구하기</Text>
-                        </TouchableOpacity>
-                      </View>
-                    </View>
-                  </View>
-
-                </View>
-
-                <View style={{ flex: 1, backgroundColor: 'black', opacity: 0.2 , }}>
-                </View>
-              </View>
-            );
-          })
-
-        }
-        </View>
-
-
-        <View style={{ flex: 1, backgroundColor: 'yellow', height: 500, }}>
-          <Text>s</Text>
-        </View>
       </Scroll>
     </Container>
   )

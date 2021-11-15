@@ -249,7 +249,7 @@ import StackNavigator from '../../Components/StackNavigator';
 export default function Setting(){
     return (
         <>  
-            <Text>hi</Text>
+            
             <StackNavigator/>
         </>
     );

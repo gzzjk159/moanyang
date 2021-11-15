@@ -15,25 +15,30 @@ import {
     TextInput,
     Touchable,
     StatusBar,
-   
+    Linking,
     TouchableWithoutFeedback
 
 } from 'react-native';
 import styled from 'styled-components';
 import FastImage from 'react-native-fast-image';
 import ImageModal from 'react-native-image-modal';
+import Tabs from '../../Components/TopTapNavigator';
+
 
 const Scroll = styled.ScrollView``;
 
-function Item_Component({ item }) {
+ 
+function Item_Component({ item, navigation  }) {
 
+  
+      
     return (
         <Scroll>
         <View >
 
             <View style={{ flex: 1, }}>
                 <View style={{ flex: 1.7, }}>
-                    <ImageModal
+                    <ImageModal resizeMode="stretch"
                         style={styles.ImgModal}
                         source={{ uri: `${item.image}` }} />
                 </View>
@@ -51,17 +56,17 @@ function Item_Component({ item }) {
                             <Text style={styles.see}> 조회수: {item.see}  </Text>
                         </View>
                         <View style={{ flex: 1, flexDirection: 'row', }}>
-                            <TouchableOpacity style={styles.informationcover}>
+                            <TouchableOpacity style={styles.informationcover} onPress={()=>{Linking.openURL(item.site)}} >
                                 <View>
 
-                                    <Text style={styles.information}>
+                                    <Text style={styles.information} >
                                         정보
                                     </Text>
 
                                 </View>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.talkcover}>
+                            <TouchableOpacity style={styles.talkcover} >
                                 <View>
                                     <Text style={styles.talktalk}>
                                         톡톡
@@ -110,7 +115,7 @@ const styles = StyleSheet.create({
         marginTop: 2,
         marginLeft: 5,
         marginRight: 5,
-        resizeMode: "stretch",
+        
     },
 
     ImageContent: {

@@ -12,7 +12,8 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import StackNavigator from './Components/StackNavigator';
 import Home from './Screen/DrawScreen/HomeScreen';
 import hhs from './Components/LoginNavigator';
-
+import { LogBox } from 'react-native';
+import { useEffect } from 'react';
 
 const Container = styled.SafeAreaView`
   flex : 1;
@@ -20,18 +21,23 @@ const Container = styled.SafeAreaView`
 
 const Stack = createStackNavigator();
 export default function App () {
+  useEffect(() => {
+    LogBox.ignoreLogs(['If you want to use Reanimated 2']);
+    LogBox.ignoreLogs(['Require cycle:']);
+    LogBox.ignoreLogs(['Non-serializable values']);
+    LogBox.ignoreLogs(['Each child in a list ']);
+}, [])
+
   return (
+    
       <Container>
         <StatusBar
           animated={true}
           backgroundColor="#000000"
         />
         <NavigationContainer>
-
-                 
+       
           <Home/>
-          
-          
           
         </NavigationContainer>
         

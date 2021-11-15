@@ -1,18 +1,20 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground,Image } from 'react-native';
-
+import {Fonts} from '../src/fonts';
+import Styled from 'styled-components/native'
 
 function FirstPage({ navigation }) {
     return (
-        <View style={{ height: 720 ,backgroundColor:'#313A96', }}>
+        <View style={{ flex: 1 ,backgroundColor:'#313A96', }}>
             
             <View style={{ flex: 2.5, borderColor:'#313A96',borderWidth:4,  }}>
                 
                 
-                <Text style={{ flex: 1,fontSize: 48, fontWeight:'bold',
-                    textAlign:'center',textAlignVertical:'center', color:'#FFFFFF', }}>
-                    안양대 인원 모집 애플리케이션
+                <Text style={{ flex: 1,fontSize: 60, fontWeight:'bold',
+                    textAlign:'center',textAlignVertical:'center', color:'#FFFFFF', fontFamily: Fonts.BMDOHYEON }}>
+                    모아냥
                 </Text>
+                
                 <View style={{flex: 1,}}>
                 <Image style={{width: 200,height: 200, alignSelf:'center',alignSelf:'center', }} source={require('../assets/image/moanyang.png')}/>
                 {/* <Text style={{ flex: 1,fontSize: 50, fontWeight:'bold', color:'#FFFFFF',

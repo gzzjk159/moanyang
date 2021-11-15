@@ -1,6 +1,7 @@
 import 'react-native-gesture-handler'
 import * as React from 'react';
-import NonData from '../../Nondummy.json'
+import RoomData from '../../Roomdummy.json';
+import Picker from '../../picker';
 import {
     StyleSheet,
     SafeAreaView,
@@ -14,10 +15,9 @@ import {
 
 import styled from 'styled-components';
 
-import { OnData } from '../../Nondum';
-
-
-
+import ImageModal from 'react-native-image-modal';
+import { FlatList } from 'react-native';
+import itemCompent from "./itemRoom";
 
 export default function Talks() {
 
@@ -34,108 +34,32 @@ height : 50px;
 background-color : '#ffffff';
 `;
 
-    const [tempData, aData] = React.useState(NonData.slice(0, 3));
+    const [tempData, aData] = React.useState(RoomData.slice(0, 10));
 
     return (
         <Container style={styles.gray}>
-            <Row>
-                <TouchableOpacity activeOpacity={0.5} style={styles.button} onPress={() => { }}>
-                    <Text>
-                        비교과
-                    </Text>
-                </TouchableOpacity>
-                <TouchableOpacity activeOpacity={0.5} style={styles.button} onPress={() => { }}>
-                    <Text>
-                        공모전
-                    </Text>
-                </TouchableOpacity>
-                <TouchableOpacity activeOpacity={0.5} style={styles.button} onPress={() => { }}>
-                    <Text>
-                        대외활동
-                    </Text>
-                </TouchableOpacity>
-                <TouchableOpacity activeOpacity={0.5} style={styles.button} onPress={() => { }}>
-                    <Text>
-                        스터디
-                    </Text>
-                </TouchableOpacity>
-            </Row>
-            <Row>
-                <TouchableOpacity activeOpacity={0.5} style={styles.button} onPress={() => { }}>
-                    <Text>
-                        동아리
-                    </Text>
-                </TouchableOpacity>
-                <TouchableOpacity activeOpacity={0.5} style={styles.button} onPress={() => { }}>
-                    <Text>
-                        버튼
-                    </Text>
-                </TouchableOpacity>
-                <TouchableOpacity activeOpacity={0.5} style={styles.button} onPress={() => { }}>
-                    <Text>
-                        버튼
-                    </Text>
-                </TouchableOpacity>
-                <TouchableOpacity activeOpacity={0.5} style={styles.button} onPress={() => { }}>
-                    <Text>
-                        기타
-                    </Text>
-                </TouchableOpacity>
-            </Row>
-
-
+            <View style={{backgroundColor: '#D9D9D9', opacity: 0.5,height: 60, marginLeft: 100,marginRight: 100, margin: 10,}}>
+            <Picker/>
+            </View>
             <TouchableOpacity style={styles.makeRoom}>
                 <Text style={styles.makeRoomText}>방만들기</Text>
             </TouchableOpacity>
+
+           
 
             <View style={{ backgroundColor: '#313A96', height: 3, }} />
 
 
 
             <Scroll>
-                {/* {
-                    tempData.map(data => {
-                        return (
-                            <View >
-                            <TouchableOpacity key={data.id}>
-                                <View style={{ flex: 1, height: 80, }}>
-                                    <View style={{ flexDirection: 'row', flex: 1, }}>
-                                        <View style={{ flex: 1, }} >
-                                            <TouchableOpacity>
-                                                <Image style={styles.ImageContent}
-                                                    source={require('../../assets/image/non/non01.jpg')} />
-                                            </TouchableOpacity>
-
-                                        </View>
-                                        <View style={{ flex: 3, flexDirection: 'column', }}>
-                                            <View style={{ flex: 1, flexDirection: 'row', }}>
-                                                <View style={{ flex: 5, }}>
-                                                    <Text numberOfLines={1} style={styles.Title}> {data.name}</Text>
-                                                </View>
-                                                <View style={{ flex: 1, }}>
-                                                    <Text style={styles.personal}> 1 / 4</Text>
-                                                </View>
-                                            </View>
-                                            <View style={{ flex: 1, flexDirection: 'row', }}>
-                                                <View style={{ flex: 1, }}>
-                                                    <Text style={styles.dday}> D - {data.day} </Text>
-                                                </View>
-                                                <View style={{ flex: 4, }}>
-                                                    <Text style={styles.see}> 조회수: {data.see} </Text>
-
-                                                </View>
-
-                                            </View>
-                                        </View>
-                                    </View>
-                                </View>
-                            </TouchableOpacity>
-
-                            <View style={{ backgroundColor: '#313A96', height: 3, }} />
-                            </View>
-                        );
-                    })
-                } */}
+                    <SafeAreaView>
+                        <FlatList
+                        data={tempData}
+                        renderItem={(itemCompent)}
+                        keyExtractor={item => item.id}
+                        numColumns={1}
+                        />
+                    </SafeAreaView>
                 
             </Scroll>
 
@@ -166,8 +90,9 @@ const styles = StyleSheet.create({
         backgroundColor: 'yellow',
         borderColor: '#313A96',
         borderWidth: 2,
-        margin: 10,
-        marginTop: 20,
+        marginLeft: 10,
+        marginRight: 10,
+        marginBottom: 10,
         padding: 10,
         textAlign: 'center',
         alignItems: 'center',

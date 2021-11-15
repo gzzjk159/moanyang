@@ -31,13 +31,13 @@ const Stack = createStackNavigator();
 export default function StackNavigator({navigation}){
     return (
         <Stack.Navigator>
-            <Stack.Screen
+            {/* <Stack.Screen
                 name = "Homee"
                 component = {FirstPage}
                 options={{
                     headerShown : false,    
                 }} 
-            />
+            /> */}
             
 
             <Stack.Screen
