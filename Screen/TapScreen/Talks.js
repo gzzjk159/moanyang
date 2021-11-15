@@ -22,9 +22,11 @@ const Talk = styled.View`
     background-color : '#ffffff';
 `;
 export default function Talks(){
+
   return(
-    // picker로 코딩 다시 하기
     <Container style={styles.gray}>
+
+       {/* 버튼 만들기 */}
       <Row>
         <TouchableOpacity activeOpacity={0.5} style={styles.button} onPress={()=> {}}>
           <Text>
@@ -69,6 +71,7 @@ export default function Talks(){
           </Text>
         </TouchableOpacity>
       </Row>
+
       <Scroll>
           <Talk>
               <Text>기능 구현중</Text>

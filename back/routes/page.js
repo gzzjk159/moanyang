@@ -7,13 +7,12 @@ const router = express.Router();
 const { Activity } = require('../models')
 
 
-router.get("/", async (req, res) => {
-  try{
-    const activity = await Activity.findAll();
+router.get("/",  (req, res) => {
+  
+    const activity =  Activity.findAll();
     console.log("activity");
     return res.json(activity);
-  }
-  catch{}
+ 
 });
 
 module.exports = router;

@@ -3,7 +3,7 @@ const app = express();
 const port = 3306;
 const mysql = require('mysql');
 const router = Router();
-const { Activity } = require('./models')
+const { Activity } = require('./models/index_models')
 
 router.get('/', async (req, rep) => {
   try{

@@ -7,6 +7,10 @@ exports.module = {
     database: process.env.MYSQL_DATABASE,
     host: process.env.MYSQL_HOST,
     dialect: "mysql",
+    difine : {
+      timestamps : false,
+      underscored : true,
+    },
   },
   test: {
     username: "root",

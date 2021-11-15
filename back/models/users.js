@@ -1,39 +1,40 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('chat_room', {
+  return sequelize.define('users', {
     id: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    type: {
-      type: DataTypes.INTEGER,
+    email: {
+      type: DataTypes.STRING(30),
+      allowNull: false,
+      unique: "email"
+    },
+    name: {
+      type: DataTypes.STRING(15),
       allowNull: false
     },
-    sub_type: {
-      type: DataTypes.INTEGER,
+    password: {
+      type: DataTypes.STRING(25),
+      allowNull: false
+    },
+    major: {
+      type: DataTypes.STRING(15),
       allowNull: true
     },
-    title: {
-      type: DataTypes.STRING(40),
-      allowNull: false
-    },
-    owner_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    participants: {
-      type: DataTypes.INTEGER,
+    image: {
+      type: DataTypes.TEXT,
       allowNull: true
     },
-    total_people: {
-      type: DataTypes.INTEGER,
+    profile: {
+      type: DataTypes.STRING(150),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'chat_room',
+    tableName: 'users',
     timestamps: true,
     paranoid: true,
     indexes: [
@@ -43,6 +44,14 @@ module.exports = function(sequelize, DataTypes) {
         using: "BTREE",
         fields: [
           { name: "id" },
+        ]
+      },
+      {
+        name: "email",
+        unique: true,
+        using: "BTREE",
+        fields: [
+          { name: "email" },
         ]
       },
     ]

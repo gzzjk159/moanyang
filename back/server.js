@@ -8,15 +8,13 @@ const http = require("http");
 const fs = require("fs");
 require("dotenv").config();
 const cors = require('cors');
-
-const { sequelize } = require("./models");
+const { sequelize } = require("./models/index_models");
 const app = express();
 sequelize.sync();
 
 
 const pageRouter = require("./routes/page");
 app.use("/", pageRouter);
-
 
 
 app.set("views", path.join(__dirname, "view"));
