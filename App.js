@@ -1,48 +1,63 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
-import React from 'react';
-import type {Node} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
+import 'react-native-gesture-handler'
+import * as React from 'react';
+import {NavigationContainer, useNavigation } from '@react-navigation/native';
+import{
   StyleSheet,
-  Text,
-  useColorScheme,
-  View,
+  StatusBar,
 } from 'react-native';
+import styled from 'styled-components/native';
+import DrawerNavigator from './Components/DrawerNavigator';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import StackNavigator from './Components/StackNavigator';
+import Home from './Screen/DrawScreen/HomeScreen';
+import hhs from './Components/LoginNavigator';
+import { LogBox } from 'react-native';
+import { useEffect } from 'react';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+const Container = styled.SafeAreaView`
+  flex : 1;
+`;
 
-const App: () => Node = () => {
+const Stack = createStackNavigator();
+export default function App () {
+  useEffect(() => {
+    LogBox.ignoreLogs(['If you want to use Reanimated 2']);
+    LogBox.ignoreLogs(['Require cycle:']);
+    LogBox.ignoreLogs(['Non-serializable values']);
+    LogBox.ignoreLogs(['Each child in a list ']);
+}, [])
+
   return (
-    <View style = {styles.container}>
-      <Text style = {styles.hello}>지금 시각은 4:04분에 테스트 하고 있습니다.</Text>
-    </View>
-  );
-};
-
-const styles = StyleSheet.create({
-  container : {
-    flex : 1,
-    justifyContent : 'center',
-    alignItems : 'center',
-  },
-  hello : {
-    color : 'red',
-  }
-});
-
-export default App;
+    
+      <Container>
+        <StatusBar
+          animated={true}
+          backgroundColor="#000000"
+        />
+        <NavigationContainer>
+       
+          <Home/>
+          
+        </NavigationContainer>
+        
+      </Container>
+  )
+}
+{/* <DrawerNavigator/> */}
+// const styles = StyleSheet.create({
+//   blue : {
+//      backgroundColor : '#313A96',
+//   },
+//   row : {
+//     flexDirection : 'row',
+//   },
+//   searchImage : {
+//     width : 50,
+//     height : 50,
+//   },
+//   myTalkImage : {
+//     width : 50,
+//     height : 50,
+//   },
+// });
